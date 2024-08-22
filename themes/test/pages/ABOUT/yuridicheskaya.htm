@@ -1,0 +1,130 @@
+url = "/yuridicheskaya-informaciya"
+layout = "default"
+title = "Юридическая информация о медицинском центре Астра Мед"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.7
+seoOptionsMetaDescription = "Юридическая информация о медицинском центре Астра Мед: НАИМЕНОВАНИЕ, ИНН, ОГРН, Документы, Дипломы, Сертификаты и т.д."
+seoOptionsCanonicalUrl = "https://astramed-72.ru/yuridicheskaya-informaciya"
+seoOptionsOgUrl = "https://astramed-72.ru/yuridicheskaya-informaciya"
+seoOptionsOgImage = "/images/about/1674373129_3-30.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/about/1674373129_3-30.jpg"
+==
+<?php
+function onStart(){
+        $this->getDocument();
+    }
+
+    function getDocument(){
+        $documents = [
+            [
+                'href' => 'assets/documents/1.pdf',
+                'name' => 'Организационная структура компании'
+            ],
+            [
+                'href' => 'assets/documents/2.pdf',
+                'name' => 'Правила поведения пациентов, их законных представителей, посетителей при нахождении в ООО МЦ «Астра-мед»'
+            ],
+            [
+                'href' => 'assets/documents/3.pdf',
+                'name' => 'Положение о правилах предоставления платных медицинских услуг'
+            ],
+            [
+                'href' => 'assets/documents/4.pdf',
+                'name' => 'Правила подготовки к диагностическим исследованиям'
+            ],
+            [
+                'href' => 'assets/documents/5.pdf',
+                'name' => 'Контакты контролирующих органов'
+            ],
+            [
+                'href' => 'assets/documents/license.pdf',
+                'name' => 'Лицензия на осуществление медицинской деятельности'
+            ],
+            [
+                'href' => 'assets/documents/7.pdf',
+                'name' => 'Свидетельство о постановке на учёт российской организации в налоговом органе'
+            ],
+            [
+                'href' => 'assets/documents/8.pdf',
+                'name' => 'Перечень жизненно необходимых и важнейших лекарственных препаратов'
+            ],
+            [
+                'href' => 'assets/documents/9.pdf',
+                'name' => 'О Территориальной программе государственных гарантий бесплатного оказания гражданам медицинской помощи в ООО МЦ «Астра-мед» г. Тюмени на 2019 и на плановый период 2020 и 2021 годов.'
+            ],
+            [
+                'href' => 'assets/documents/10.pdf',
+                'name' => 'О сроке, порядке, результатах диспансеризации населения'
+            ],
+            [
+                'href' => 'assets/documents/11.pdf',
+                'name' => 'Правила записи на первичный прием'
+            ],
+            [
+                'href' => 'assets/documents/12.pdf',
+                'name' => 'Сведения о страховых медицинских организациях'
+            ],
+            [
+                'href' => 'assets/documents/13.pdf',
+                'name' => 'Права и обязанности граждан в сфере здравоохранения извлечение из Федерального закона от 21.11.2011 № 323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации"'
+            ],
+            [
+                'href' => 'assets/documents/14.pdf',
+                'name' => 'Постановление правительства Российской Федерации от 10 декабря 2018 г. N 1506 О программе государственных гарантий бсплатного оказания гражданам медицинской помощи на 2019 год и на плановый период 2020 и 2021 годов'
+            ],
+            [
+                'href' => 'assets/documents/soglasie-na-obrabotky-personalnih-dannih.pdf',
+                'name' => 'Политика ООО МЦ «Астра-мед» в отношении обработки персональных данных'
+            ],
+            [
+                'href' => 'assets/documents/price.pdf',
+                'name' => 'Прайс'
+            ],
+            [
+                'href' => 'assets/documents/report_on_the_special_assessment_of_working_conditions.pdf',
+                'name' => 'Отчёт о проведении специальной оценки условий труда'
+            ],
+            [
+                'href' => 'assets/documents/schedule_of_specialists.pdf',
+                'name' => 'График работы специалистов'
+            ],
+        ];
+
+        $this['documents'] = $documents;
+    }
+?>
+==
+{% partial 'parts/breadcrump' %}
+
+{% partial "parts/title-in-page" title='Юридическая информация о медицинском центре "Астрамед"' %}
+
+<section class="main-container flex-col py-5">
+    <p>Общество с ограниченной ответственностью Медицинский Центр «Астра-мед-72» (ООО МЦ «Астра-мед-72»)</p>
+    <p>Дата регистрации: 14.09.2009 г.</p>
+    <p>Учредитель: Гуртовая Марина Николаевна, Гуртовой Сергей Степанович</p>
+    <p>Лицензия ООО Медицинский Центр «Астра–мед» на осуществление медицинской деятельности № Л041-01107-72/00293948 с 01.08.2014г. на срок: бессрочно (выдана Департаментом здравоохранения Тюменской области, телефон: 8 (3452) 55-78-00, адрес: г. Тюмень, ул. Малыгина, д.48)</p>
+    <p>Свидетельство о постановке на учет в налоговом органе: ОГРН 1097232023503 (Свидетельство о внесении записи в Единый государственный реестр юридических лиц бланк серии 72 номер 001816464 от 14.09.2009 г.</p>
+
+    <div class="flex items-start flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Документы</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 auto-cols-auto auto-rows-auto gap-4">
+		{% for document in documents %}
+			<a href="{{ document.href|theme }}" class="standart-container">
+				<div class="w-full flex flex-col items-left gap-3">
+					<p class="w-full text-xs md:text-sm font-semibold text-center">{{ document.name }}</p>
+					<p class="w-full text-sm text-center">Подробнее</p>
+				</div>
+			</a>
+		{% endfor %}
+    </div>
+</section>

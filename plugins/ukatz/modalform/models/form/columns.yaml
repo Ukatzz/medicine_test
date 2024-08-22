@@ -1,0 +1,9 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+    image:
+        label: image
+        type: text
+        searchable: true

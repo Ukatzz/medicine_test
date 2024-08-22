@@ -1,0 +1,29 @@
+columns:
+  sort_order:
+    label: "yamobile.thirdpartycode::lang.code.fields.sort_order.label"
+    type: number
+    align: left
+  name:
+    label: "yamobile.thirdpartycode::lang.code.fields.name.label"
+    type: text
+    searchable: true
+    sortable: false
+    align: left
+  is_enabled:
+    label: "yamobile.thirdpartycode::lang.code.fields.is_enabled.label"
+    type: switch
+    align: left
+  target_id:
+    label: "yamobile.thirdpartycode::lang.code.fields.target.label"
+    type: text
+    searchable: true
+    select: name
+    relation: target
+  created_at:
+    label: "yamobile.thirdpartycode::lang.code.fields.created_at.label"
+    type: datetime
+    align: left
+  updated_at:
+    label: "yamobile.thirdpartycode::lang.code.fields.updated_at.label"
+    type: datetime
+    align: left

@@ -1,0 +1,25 @@
+0.0.1:
+  - Initialize plugin
+0.2.0:
+  - Create leads
+  - create_yamobile_leadtracker_leads.php
+0.3.0:
+  - Add Tracker component
+0.4.0:
+  - Added ip address definition
+  - Added user address definition
+  - Added the ability to create custom fields
+  - Added definition of user device information
+  - Localization errors have been fixed
+  - add_user_device_to_yamobile_leadtracker_leads.php
+0.5.0:
+  - Added definition of utm tags
+  - add_utm_mark_to_yamobile_leadtracker_leads.php
+0.5.1:
+  - Fixed output of info fields in the template email
+0.5.2:
+  - Add subject for new lead mail view
+0.5.3:
+  - Fix email view compatibility
+0.6.0:
+  - Added optional phone require for lead

@@ -1,0 +1,43 @@
+<section class="breadcrump">
+    <div class="main-container py-6">
+        <div class="flex flex-row flex-wrap w-full justify-left gap-4 text-sm">
+            <!-- Главная страница -->
+            <a href="{{ '/' | app }}" class="hover:underline">Главная</a>
+
+            {% set segments = this.page.url | split('/') %}
+            {% set path = '' %}
+
+            {% for segment in segments %}
+                {% if segment is not empty %}
+                    {% set path = path ~ '/' ~ segment %}
+                      <div class="text-block-823">/</div>
+                    
+                    {% if loop.last %}
+                        <!-- Последний элемент (текущая страница) -->
+                        <span>{{ this.page.title }}</span>
+
+                    {% elseif loop.index == 3 and segment == ':category_slug'%}
+                        <a href="/uslugi/{{data.slug}}" class="hover:underline">{{data.name}}</a>
+                    
+                    {% else %}
+                        <!-- Промежуточные страницы -->
+                        <a href="{{ path | app }}" class="hover:underline">
+                            {% if segment == 'uslugi' %}
+                                Услуги
+                            {% elseif segment == 'vrachi' %}
+                                Врачи медицинского центра Астра Мед
+                            {% elseif segment == 'ceny' %}
+                                Цены
+                            {% elseif segment == 'promo' %}
+                                Акции
+                            {% elseif segment == 'news' %}
+                                Новости
+                             {% else %}
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

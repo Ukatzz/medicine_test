@@ -1,0 +1,17 @@
+{
+    "name": "initbiz/seostorm-plugin",
+    "type": "october-plugin",
+    "description": "Total SEO page control in October",
+  "license": "MIT",
+    "keywords": [
+        "october",
+        "cms",
+        "seo",
+        "plugin"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0",
+        "october/system": ">=2.1.12"
+    }
+}

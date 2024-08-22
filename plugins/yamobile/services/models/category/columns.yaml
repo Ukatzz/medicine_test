@@ -1,0 +1,43 @@
+columns:
+    image:
+        label: 'yamobile.services::lang.services.image.label'
+        path: $/yamobile/services/partials/_column-image.htm
+        type: partial
+    preview_image:
+        label: 'yamobile.services::lang.services.preview_image.label'
+        path: $/yamobile/services/partials/_column-image.htm
+        type: partial
+    id:
+        label: 'yamobile.services::lang.services.id.label'
+        type: number
+        span: auto
+    name:
+        label: 'yamobile.services::lang.services.name.label'
+        type: text
+        span: auto
+        searchable: true
+    is_enabled:
+        label: 'yamobile.services::lang.services.is_enabled.label'
+        type: switch
+    description:
+        label: 'yamobile.services::lang.services.description.label'
+        type: text
+        invisible: true
+    meta_title:
+        label: 'yamobile.services::lang.services.meta.title.label'
+        type: text
+        invisible: true
+    meta_description:
+        label: 'yamobile.services::lang.services.meta.description.label'
+        type: text
+        invisible: true
+    meta_keywords:
+        label: 'yamobile.services::lang.services.meta.keywords.label'
+        type: text
+        invisible: true
+    created_at:
+        label: 'yamobile.services::lang.services.created_at'
+        type: datetime
+    updated_at:
+        label: 'yamobile.services::lang.services.updated_at'
+        type: datetime

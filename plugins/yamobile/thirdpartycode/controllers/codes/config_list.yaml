@@ -1,0 +1,15 @@
+list: $/yamobile/thirdpartycode/models/code/columns.yaml
+modelClass: Yamobile\ThirdPartyCode\Models\Code
+title: Codes
+noRecordsMessage: "backend::lang.list.no_records"
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+  buttons: list_toolbar
+  search:
+    prompt: "backend::lang.list.search_prompt"
+recordUrl: "yamobile/thirdpartycode/codes/update/:id"
+defaultSort:
+  column: sort_order
+  direction: asc

@@ -1,0 +1,10 @@
+name: Post
+form: $/yamobile/blog/models/post/fields.yaml
+modelClass: Yamobile\Blog\Models\Post
+defaultRedirect: yamobile/blog/post
+create:
+    redirect: 'yamobile/blog/post/update/:id'
+    redirectClose: yamobile/blog/post
+update:
+    redirect: yamobile/blog/post
+    redirectClose: yamobile/blog/post

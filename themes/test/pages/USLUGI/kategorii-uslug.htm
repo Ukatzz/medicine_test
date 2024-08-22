@@ -1,0 +1,59 @@
+url = "/uslugi/:slug"
+layout = "custom"
+title = "Категории услуг"
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+
+[CategoryComponent]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd(){
+    $categories = $this-> components['CategoryComponent']->category->getOriginal();
+
+    $categoriesName = $categories['name'];
+    $categoriesMetaTitle = $categories['meta_title'];
+    $categoriesMetaDescription = $categories['meta_description'] . ' в Медицинском Центре «Астра-мед»';
+    $categoriesMetaImage = 'https://astramed-72.ru/storage/app/media' . $categories['image'];
+
+    $this->page->meta_tags .= '<link rel="canonical" href="' . $this->currentPageUrl() . '">' . PHP_EOL;
+    $this->page->meta_tags .= '<meta property="robots" content="index,follow">';
+    $this->page->meta_tags .= '<meta property="og:type" content="website">';
+    $this->page->meta_tags .= '<meta property="og:title" content="' . $categoriesMetaTitle . '">';
+    $this->page->meta_tags .= '<meta property="og:description" content="' . $categoriesMetaDescription . '">';
+    $this->page->meta_tags .= '<meta property="og:image" content="' . $categoriesMetaImage . '">';
+    $this->page->meta_tags .= '<meta property="og:url" content="' . $this->currentPageUrl() . '">';
+    $this->page->meta_tags .= '<meta name="twitter:card" content="summary_large_image">';
+    $this->page->meta_tags .= '<meta name="twitter:title" content="' . $categoriesMetaTitle . '">';
+    $this->page->meta_tags .= '<meta name="twitter:description" content="' . $categoriesMetaDescription . '">';
+    $this->page->meta_tags .= '<meta name="twitter:image" content="' . $categoriesMetaImage . '">';
+
+    $this['title_name'] = $categoriesName;
+    $this->page->title = $categoriesName . ' в Тюмени';
+    $this->page->meta_description = $categoriesMetaDescription;
+
+}
+?>
+==
+{% set category = CategoryComponent.category %}
+
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title=title_name %}
+
+<section class="main-container flex-col">
+    <div class="grid grid-cols-2 md:grid-cols-4  gap-4">
+        {% for service in category.services %}
+            <article class="service-container">
+                <a class="w-full h-full p-2.5 flex flex-col justify-center items-center gap-3" href="{{ ('uslugi/' ~ category.slug ~ '/' ~ service.slug) | app }}">
+                    <img
+                        class="h-14"
+                        src="{{ service.image | media}}"
+                        loading="lazy"
+                        alt="{{ service.name }}" />
+                    <h3 class="text-base md:text-lg font-medium text-center">{{ service.name }}</h3>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>

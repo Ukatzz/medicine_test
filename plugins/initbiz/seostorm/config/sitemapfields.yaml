@@ -1,0 +1,107 @@
+enabled_in_sitemap:
+    label: initbiz.seostorm::lang.form.general.enabled_in_sitemap_label
+    commentAbove: initbiz.seostorm::lang.form.general.enabled_in_sitemap_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    type: checkbox
+    default: true
+    span: left
+
+use_updated_at:
+    label: initbiz.seostorm::lang.form.general.use_updated_at_label
+    commentAbove: initbiz.seostorm::lang.form.general.use_updated_at_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    commentHtml: true
+    span: left
+    type: checkbox
+    default: true
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+lastmod:
+    label: initbiz.seostorm::lang.form.general.lastmod_label
+    commentAbove: initbiz.seostorm::lang.form.general.lastmod_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    type: datepicker
+    mode: datetime
+    span: right
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+changefreq:
+    label: initbiz.seostorm::lang.form.general.changefreq_label
+    commentAbove: initbiz.seostorm::lang.form.general.changefreq_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    type: dropdown
+    options:
+        always: always
+        hourly: hourly
+        daily: daily
+        weekly: weekly
+        monthly: monthly
+        yearly: yearly
+        never: never
+    span: left
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+priority:
+    label: initbiz.seostorm::lang.form.general.priority_label
+    commentAbove: initbiz.seostorm::lang.form.general.priority_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    type: dropdown
+    options:
+        '0.1': '0.1'
+        '0.2': '0.2'
+        '0.3': '0.3'
+        '0.4': '0.4'
+        '0.5': '0.5'
+        '0.6': '0.6'
+        '0.7': '0.7'
+        '0.8': '0.8'
+        '0.9': '0.9'
+        '1.0': '1.0'
+    span: left
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+model_class:
+    label: initbiz.seostorm::lang.form.general.model_class_label
+    commentAbove: initbiz.seostorm::lang.form.general.model_class_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    placeholder: initbiz.seostorm::lang.form.general.model_class_placeholder
+    type: text
+    span: left
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+model_scope:
+    label: initbiz.seostorm::lang.form.general.model_scope_label
+    commentAbove: initbiz.seostorm::lang.form.general.model_scope_comment
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    placeholder: initbiz.seostorm::lang.form.general.model_scope_placeholder
+    type: text
+    span: right
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked
+
+model_params:
+    label: initbiz.seostorm::lang.form.general.model_params_label
+    commentAbove: initbiz.seostorm::lang.form.general.model_params_comment
+    placeholder: initbiz.seostorm::lang.form.general.model_params_placeholder
+    tab: initbiz.seostorm::lang.form.general.tab_sitemap
+    trigger:
+        action: show
+        field: enabled_in_sitemap
+        condition: checked

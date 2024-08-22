@@ -1,0 +1,64 @@
+url = "/news/:slug"
+layout = "custom"
+title = "Новость"
+
+[ArticlePage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+skip_error = 0
+==
+<?php
+function onEnd(){
+    $news = $this-> components['ArticlePage']->get();
+
+    $newsTitle = 'Новость Астрамед – ' . $news->title;
+
+    $newsMetaD = $news->seo_description;
+
+    $this->page->meta_tags .= '<link rel="canonical" href="' . $this->currentPageUrl() . '">' . PHP_EOL;
+    $this->page->meta_tags .= '<meta property="robots" content="index,follow">';
+    $this->page->meta_tags .= '<meta property="og:type" content="website">';
+    $this->page->meta_tags .= '<meta property="og:title" content="' . $newsTitle . '">';
+    $this->page->meta_tags .= '<meta property="og:description" content="' . $newsMetaD . '">';
+    $this->page->meta_tags .= '<meta property="og:url" content="' . $this->currentPageUrl() . '">';
+    $this->page->meta_tags .= '<meta name="twitter:card" content="summary_large_image">';
+    $this->page->meta_tags .= '<meta name="twitter:title" content="' . $newsTitle . '">';
+    $this->page->meta_tags .= '<meta name="twitter:description" content="' . $newsMetaD . '">';
+    
+
+    $this->page->title = $newsTitle;
+    $this->page->meta_description = $newsMetaD;
+
+}
+?>
+==
+{% set obArticle = ArticlePage.get() %}
+
+{% partial "parts/breadcrump" %}
+
+<section class="main-container py-0">
+    <div class="w-full pb-9">
+        <div class="flex flex-col md:flex-row w-full gap-5">
+            <img
+                src="{{ obArticle.preview_image.path }}" title="{{ obArticle.preview_image.title }}" alt="{{ obArticle.preview_image.description }}" loading="lazy"
+                class="rounded-lg h-80"
+            />
+            <div class="flex flex-col gap-5 w-full">
+                <div class="flex items-start flex-col w-fit">
+        			<h1 class="text-xl text-left font-medium uppercase">{{ obArticle.title }}</h2>
+        			<span class="block bg-orange w-[50px] h-[3px]"></span>
+        		</div>
+                <div class="flex flex-col gap-5 w-full">
+                    <b class="font-normal text-lg">
+                         {{ obArticle.content|raw }}
+                    </b>
+                </div>
+                <div class="w-full flex flex-col">
+                    <p class="font-semibold text-base">Дата публикации:</p>
+                    <p class="font-normal text-base">{{ obArticle.published_start.format('d F, Y') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

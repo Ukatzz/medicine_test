@@ -1,0 +1,34 @@
+url = "/feedback"
+layout = "default"
+title = "Отзывы на Медицинские Услуги Клиники Астра Мед"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Что говорят об услугах “Астра-мед-72” наши клиенты"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/feedback"
+seoOptionsOgUrl = "https://astramed-72.ru/feedback"
+seoOptionsOgImage = "/images/uslugi_inside/otolaryngology_top.png"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/uslugi_inside/otolaryngology_top.png"
+
+[ReviewList]
+items = 30
+SortOrder = "new"
+reviewstyle = 1
+itemwidth = 0
+==
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title='Отзывы стомотологической клинике "Астрамед"' %}
+
+<section class="main-container flex-col py-5">
+    <div class="flex flex-col w-full items-center">
+        <a href="{{ 'FEEDBACK/review'|page }}" class="orange-button-form w-fit px-5">Оставить отзыв</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-5 items-center py-4 pb-9 w-full">
+        {% partial "parts/partFeedBack" data='2' %}
+    </div>
+</section>

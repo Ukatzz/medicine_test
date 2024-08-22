@@ -1,0 +1,4 @@
+title: Prices
+modelClass: Yamobile\Services\Models\Price
+toolbar:
+    buttons: reorder_toolbar

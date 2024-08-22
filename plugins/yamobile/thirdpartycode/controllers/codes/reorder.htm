@@ -1,0 +1,9 @@
+<? $this->pageTitle = e(trans('yamobile.thirdpartycode::lang.code.pages.reorder.title')) ?>
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('yamobile/thirdpartycode/codes') ?>"><?= e(trans('yamobile.thirdpartycode::lang.code.pages.index.breadcrumb')) ?></a></li>
+        <li><?= e(trans('yamobile.thirdpartycode::lang.code.pages.reorder.breadcrumb')) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->reorderRender() ?>

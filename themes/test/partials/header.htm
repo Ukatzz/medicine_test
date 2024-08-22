@@ -1,0 +1,54 @@
+[viewBag]
+==
+<?php
+function onSend(){
+    // These variables are available inside the message as Twig
+   $vars = ['name' => 'Placeholder',];
+
+   Mail::send('123', $vars, function($message) {
+       $message->to('kmike.4work@gmail.com', '');
+       $message->subject('');
+   });
+ }
+?>
+==
+<header
+	id="header"
+	class="main-container py-3 text-sm"
+	>
+	<div class="flex justify-between font-normal text-black w-full flex-col md:flex-row">
+	<a href="{{ 'MAIN/homepage'|page }}" class="flex items-center gap-3"
+		><img src="{{'assets/images/logo.png'|theme}}" class="header__logo-image" alt="logo"/>
+		<p class="font-bold text-xl text-gray-light w-full">Астра-мед-72</p>
+	</a>
+	<div class="flex flex-col justify-center sm:flex md:hidden xl:flex text-center md:text-left">
+		<address class="not-italic">
+			<span class="text-blue-dark font-bold">Адрес:</span><br />г. Тюмень,
+			ул. Пермякова, 68, к 2
+		</address>
+		<address class="text-blue-dark font-bold not-italic">
+			Почта:
+			<a class="text-black font-normal" href="mailto:astramed2009@mail.ru"
+			>astramed2009@mail.ru</a
+			>
+		</address>
+	</div>
+	<div class="flex flex-col justify-center text-center md:text-left">
+		<p>
+			<span class="text-blue-dark font-bold">Время:<br /></span>Пн-Пт: с
+			09:00 до 20:00<br />Сб-Вс: с 09:00 до 16:00<br />
+		</p>
+	</div>
+	<div class="text-center md:text-left">
+		<div>
+			<p class="text-blue-dark font-bold text-base">Телефон:</p>
+			<address class="text-base not-italic">
+			<a href="tel:+79504987083">
+               +7 (950)498 70 83
+            </a>
+			</address>
+		</div>
+		<button type="button" onclick="window.contactModal.show()" class="orange-button text-base text-white">Консультация</button>
+	</div>
+	</div>
+</header>

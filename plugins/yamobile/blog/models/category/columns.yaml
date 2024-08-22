@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: Название
+        type: text
+        searchable: true
+    created_at:
+        label: 'Дата создания'
+        type: datetime
+    updated_at:
+        label: 'Дата последнего изменения'
+        type: datetime

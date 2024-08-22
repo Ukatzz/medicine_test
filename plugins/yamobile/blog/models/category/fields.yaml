@@ -1,0 +1,71 @@
+fields:
+    name:
+        label: Название
+        span: full
+        placeholder: Категория
+        required: 1
+        type: text
+        commentAbove: 'Используется в качестве основного названия категории'
+    status:
+        label: Статус
+        span: full
+        default: 1
+        required: 1
+        type: checkbox
+        comment: 'Включить/выключить отображение категории на сайте'
+    title:
+        label: Заголовок
+        span: full
+        placeholder: Заголовок
+        required: 0
+        preset:
+            field: name
+            type: exact
+        type: text
+        commentAbove: 'Используется для H1 на странице категории'
+    image:
+        label: Изображение
+        span: full
+        mode: image
+        type: mediafinder
+    description:
+        label: Описание
+        size: small
+        span: full
+        placeholder: 'Описание в несколько предложений'
+        type: textarea
+        commentAbove: 'Используется на странице категории'
+    slug:
+        label: URL
+        span: full
+        placeholder: category-url
+        preset:
+            field: name
+            type: slug
+        type: text
+        commentAbove: 'URL категории'
+tabs:
+    fields:
+        meta_title:
+            label: Title
+            span: full
+            placeholder: 'Title в несколько слов'
+            required: 0
+            type: text
+            commentAbove: 'Используется в мета-теге title на странице категории'
+            tab: SEO
+        meta_description:
+            label: Description
+            size: small
+            span: full
+            placeholder: 'Description в несколько предложений'
+            type: textarea
+            commentAbove: 'Используется в мета-теге description на странице категории'
+            tab: SEO
+        meta_keywords:
+            label: Keywords
+            span: full
+            placeholder: 'Слова или словосочетания через запятую'
+            type: text
+            commentAbove: 'Используется в мета-теге keywords на странице категории'
+            tab: SEO

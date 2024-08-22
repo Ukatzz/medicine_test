@@ -1,0 +1,10 @@
+name: Category
+form: $/yamobile/blog/models/category/fields.yaml
+modelClass: Yamobile\Blog\Models\Category
+defaultRedirect: yamobile/blog/category
+create:
+    redirect: 'yamobile/blog/category/update/:id'
+    redirectClose: yamobile/blog/category
+update:
+    redirect: yamobile/blog/category
+    redirectClose: yamobile/blog/category

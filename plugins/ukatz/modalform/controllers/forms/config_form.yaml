@@ -1,0 +1,10 @@
+name: Forms
+form: $/ukatz/modalform/models/form/fields.yaml
+modelClass: Ukatz\ModalForm\Models\Form
+defaultRedirect: ukatz/modalform/forms
+create:
+    redirect: 'ukatz/modalform/forms/update/:id'
+    redirectClose: ukatz/modalform/forms
+update:
+    redirect: ukatz/modalform/forms
+    redirectClose: ukatz/modalform/forms

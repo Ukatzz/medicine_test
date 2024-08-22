@@ -1,0 +1,72 @@
+url = "/ceny"
+layout = "default"
+title = "Цены на Медицинские Услуги Клиники Астра Мед"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Цены на медицинские услуги в Тюмени. Цена на лечение зубов, десен, уха, носаи горла. Цена на протезирование и имплантацию зубов в Тюмени. Цены на брекеты и исправление прикуса в медицинском центре Астра Мед."
+seoOptionsCanonicalUrl = "https://astramed-72.ru/ceny"
+seoOptionsOgUrl = "https://astramed-72.ru/ceny"
+seoOptionsOgImage = "/images/about/astramed.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/about/astramed.jpg"
+
+[CategoriesComponent]
+items = 25
+
+[PriceSettings]
+==
+<?php
+function onStart()
+{
+    $this->getUslugi();
+}
+
+function getUslugi()
+{
+    $uslugi = ["Стоматология терапевтическая и стоматология общей практики", "Стоматология ортопедическая","Хирургия", "Ортодонтия", "Ренгенология", "Оториноларингология"];
+
+
+    $this['uslugi'] = $uslugi;
+}
+?>
+==
+{% set categories = CategoriesComponent.categories %}
+{% set service_settings   = ServiceSettings.settings %}
+
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title='Цены на услуги в медицинском центре "Астрамед"' %}
+
+<section class="main-container flex-col">
+    <p class="text-sm">Прайс обновляется, точные цены уточняйте по телефону у администраторов медицинского центра</p>
+    {% for category in categories %}
+        {% if category.name in uslugi %}
+			<details class="bg-primary duration-300 w-full">
+				<summary style="list-style: none;" class="select-none flex justify-between text-white font-semibold px-5 py-3 text-lg cursor-pointer">{{ category.name }} <img class="transition-transform duration-300 transform rotate-0" src="{{ 'assets/images/icons/dropdown.svg'|theme }}" alt="Кнопка расскрытия"></summary>
+				<div class="bg-white">
+                    <table class="w-full border-b border-cyan">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b border-cyan bg-white text-left uppercase">Услуги {{ service.name }}</th>
+                                <th class="py-2 px-4 border-b border-cyan bg-white text-left uppercase">Цены</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for price in category.prices%}
+                                <tr class="even:bg-cyan-opacity">
+                                    <td class="py-2 border-cyan px-4">{{ price.name }}</td>
+                                    <td class="py-2 border-cyan px-4">{{ price.price }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+				</div>
+			</details>
+            
+        {%endif %}
+    {% endfor %}
+</section>

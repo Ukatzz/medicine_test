@@ -1,0 +1,46 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table yamobile_blog_category'
+    - builder_table_create_yamobile_blog_category.php
+1.0.3:
+    - 'Created table yamobile_blog_post'
+    - builder_table_create_yamobile_blog_post.php
+1.0.4:
+    - 'Created table yamobile_blog_posts_categories'
+    - builder_table_create_yamobile_blog_posts_categories.php
+1.0.5:
+    - 'Updated table yamobile_blog_category'
+    - builder_table_update_yamobile_blog_category.php
+1.0.6:
+    - 'Updated table yamobile_blog_category'
+    - builder_table_update_yamobile_blog_category_2.php
+1.0.7:
+    - 'Updated table yamobile_blog_post'
+    - builder_table_update_yamobile_blog_post.php
+1.0.8:
+    - 'Created table yamobile_blog_tags'
+    - builder_table_create_yamobile_blog_tags.php
+1.0.9:
+    - 'Updated table yamobile_blog_tags'
+    - builder_table_update_yamobile_blog_tags.php
+1.0.10:
+    - 'Created table yamobile_blog_posts_tags'
+    - builder_table_create_yamobile_blog_posts_tags.php
+1.0.11:
+    - 'Updated table yamobile_blog_posts_tags'
+    - builder_table_update_yamobile_blog_posts_tags.php
+1.0.12:
+    - 'Updated table yamobile_blog_post'
+    - builder_table_update_yamobile_blog_post_2.php
+1.0.13:
+    - 'Updated table yamobile_blog_post'
+    - builder_table_update_yamobile_blog_post_3.php
+1.0.16:
+    - 'Updated table yamobile_blog_post'
+    - builder_table_update_yamobile_blog_post_5.php
+1.0.17:
+    - 'Updated table yamobile_blog_post'
+1.0.18:
+    - 'Updated table yamobile_blog_category'
+    - builder_table_update_yamobile_blog_category_3.php

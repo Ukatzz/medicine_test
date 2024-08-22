@@ -1,0 +1,65 @@
+[Category Categories]
+slug = "{{ :slug }}"
+==
+<footer class="text-sm">
+	<div class="bg-gray py-8">
+		<div class="container w-11/12 mx-auto">
+			<div class="flex gap-2.5 flex-col w-fit justify-between md:flex-row">
+				<div class="flex flex-row justify-between mb-5 md:mb-0 gap-5">
+					<div class="w-1/2">
+						<p class="font-bold underline decoration-2">Услуги</p>
+						<ul class="flex flex-col gap-1 mt-2.5">
+							<li class="hover:underline"><a href="{{ 'USLUGI/uslugi' | page }}/implantaciya">Имплантация зубов</a></li>
+							<li class="hover:underline"><a href="{{ 'USLUGI/uslugi' | page }}/lechenie-zubov-i-estetika">Лечение зубов и эстетика</a></li>
+							<li class="hover:underline"><a href="{{ 'USLUGI/uslugi' | page }}/detskaya-stomatologiya">Детская стоматология</a></li>
+							<li class="hover:underline"><a href="{{ 'USLUGI/uslugi' | page }}/lechenie-otolaringologa">Лечение Отоларинголога</a></li>
+							{# <li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-zubov-i-estetika/brekety">Брекеты</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-zubov-i-estetika/elajnery">Элайнеры</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/implantaciya/protezirovanie-zubov">Протезирование зубов</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-zubov-i-estetika/lechenie-desen">Лечение дёсен</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-otolaringologa/lechenie-uha">Лечение уха</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-otolaringologa/lechenie-gorla">Лечение горла</a></li>
+							<li class="hover:underline"><a href="http://ukatzhost.beget.tech/uslugi/lechenie-otolaringologa/lechenie-nosa">Лечение носа</a></li> #}
+						</ul>
+					</div>
+					<div class="w-1/2">
+						<p class="font-bold underline decoration-2">Информация</p>
+						<ul class="flex flex-col gap-1 mt-2.5">
+							<li class="hover:underline"><a href="{{ 'MAIN/homepage'|page }}">Главная</a></li>
+							<li class="hover:underline"><a href="{{ 'ABOUT/o-centre'|page }}">О центре</a></li>
+							<li class="hover:underline"><a href="{{ 'PRICES/ceny-na-medicinskie-uslugi-kliniki-astra-med'|page }}">Цены</a></li>
+							<li class="hover:underline"><a href="{{ 'VRACHI/vrachi'|page }}">Наши специалисты</a></li>
+							<li class="hover:underline"><a href="{{ 'ABOUT/yuridicheskaya'|page }}">Юридическая информация</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="w-full md:w-1/5 flex flex-col gap-3">
+					<p class="font-bold underline decoration-2">Наши контакты</p>
+					{% partial "parts/contacts"%}
+				</div>
+				<div class="flex flex-col gap-3 w-full md:w-2/6">
+					<p class="text-left font-medium">Астра-мед-72 Официальный сайт стоматологической клиники в Тюмени: стоматология и отоларингология</p>
+					{% partial "actions/form-zapis4" %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-primary text-white py-8">
+		<div class="container mx-auto w-11/12">
+			<div class="flex items-center flex justify-end">
+				<p class="mr-2.5">Разработка и продвижение сайта:</p>
+				<img alt="ya-mobile" src="{{'assets/images/icons/ya-mobile-logo.svg'|theme}}" class="w-[100px]">
+			</div>
+			<p class="mt-2.5 text-justify">Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями статьи 437 (2) ГК РФ. Все цены, указанные на данном сайте, носят информационный характер. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления.
+			</p>
+			<p class="mt-10">© 2018-2024 Астра-мед-72 – Стоматологическая клиника в Тюмени. Все права защищены.</p>
+
+			{% for category in Categories.categories %}
+                <div class="collection-item-6 w-dyn-item">
+                <a href="{{ 'about' | page }}/{{ category.slug }}" class="link-4">{{ category.name }}</a>
+                </div>
+            {% endfor %}
+		</div>
+	</div>
+
+</footer>

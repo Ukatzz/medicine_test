@@ -1,0 +1,46 @@
+v0.1.0:
+    - 'Initialize plugin'
+v0.2.0:
+    - 'Add members'
+    - create_members.php
+v0.3.0:
+    - 'Add positions'
+    - create_positions.php
+    - create_members_to_positions.php
+v0.4.0:
+    - 'Add categories'
+    - create_categories.php
+    - create_members_to_categories.php
+v0.5.0:
+    - 'Add active status to members'
+    - add_is_active_to_members.php
+v0.5.1:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members.php
+v0.5.2:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_2.php
+v0.5.3:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_3.php
+v0.5.4:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_4.php
+v0.5.5:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_5.php
+v0.5.6:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_6.php
+v0.5.7:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_7.php
+v0.5.8:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_8.php
+v0.5.9:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_9.php
+v0.5.10:
+    - 'Updated table yamobile_staff_members'
+    - builder_table_update_yamobile_staff_members_10.php

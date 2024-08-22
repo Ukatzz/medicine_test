@@ -1,0 +1,68 @@
+fields:
+    publish:
+        label: 'yamobile.reviews::lang.models.fields.publish'
+        span: full
+        default: false
+        type: switch
+    name:
+        label: 'yamobile.reviews::lang.models.fields.name'
+        span: left
+        required: true
+        type: text
+    contacts:
+        type: text
+        label: 'yamobile.reviews::lang.models.fields.contacts'
+        span: auto
+    rating:
+        label: 'yamobile.reviews::lang.models.fields.rating'
+        options:
+            - 'yamobile.reviews::lang.models.fields.select_rating'
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+        showSearch: 0
+        span: auto
+        type: dropdown
+    date:
+        label: 'yamobile.reviews::lang.models.fields.date'
+        type: datepicker
+        mode: date
+        span: auto
+        required: true
+    image:
+        label: Фото
+        mode: image
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: mediafinder
+    from:
+        label: 'Откуда отзыв'
+        span: auto
+        placeholder: 'Введите название'
+        type: text
+    text:
+        label: 'yamobile.reviews::lang.models.fields.text'
+        size: small
+        span: full
+        required: true
+        type: textarea
+    reply:
+        label: 'yamobile.reviews::lang.models.fields.reply'
+        size: small
+        span: full
+        type: textarea
+    maing:
+        label: 'Где показываются'
+        options:
+            1: Главная
+            2: Отзывы
+        span: auto
+        type: checkboxlist
+    sex:
+        label: 'Аватарка женщины (по умолчанию мужчина)'
+        span: auto
+        type: switch

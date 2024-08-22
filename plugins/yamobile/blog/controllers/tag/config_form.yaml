@@ -1,0 +1,10 @@
+name: Tag
+form: $/yamobile/blog/models/tag/fields.yaml
+modelClass: Yamobile\Blog\Models\Tag
+defaultRedirect: yamobile/blog/tag
+create:
+    redirect: 'yamobile/blog/tag/update/:id'
+    redirectClose: yamobile/blog/tag
+update:
+    redirect: yamobile/blog/tag
+    redirectClose: yamobile/blog/tag

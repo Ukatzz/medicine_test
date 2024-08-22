@@ -1,0 +1,51 @@
+v1.0.1:
+    - Init
+    - create_reviews_table.php
+v1.0.2:
+    - 'add google reCAPTCHA v3'
+v1.0.3:
+    - 'added sending email notifications'
+    - 'add English translation for backend'
+    - 'fixed a bug'
+v1.0.4:
+    - 'fixed database query error'
+v1.0.5: 'Update frontscripts.js'
+v1.0.6:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list.php
+v1.0.7:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_2.php
+v1.0.8:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_3.php
+v1.0.9:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_4.php
+v1.0.10:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_5.php
+v1.0.11:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_6.php
+v1.0.12:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_7.php
+v1.0.13:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_8.php
+v1.0.14:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_9.php
+v1.0.15:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_10.php
+v1.0.16:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_11.php
+v1.0.17:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_12.php
+v1.0.18:
+    - 'Updated table yamobile_reviews_list'
+    - builder_table_update_yamobile_reviews_list_13.php

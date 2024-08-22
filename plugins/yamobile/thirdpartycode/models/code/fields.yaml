@@ -1,0 +1,31 @@
+fields:
+  name:
+    label: "yamobile.thirdpartycode::lang.code.fields.name.label"
+    span: full
+    placeholder: "Сторонний сервис"
+    required: 1
+    type: text
+    commentAbove: "yamobile.thirdpartycode::lang.code.fields.name.comment"
+  is_enabled:
+    label: "yamobile.thirdpartycode::lang.code.fields.is_enabled.label"
+    span: full
+    default: 1
+    required: 1
+    type: checkbox
+    comment: "yamobile.thirdpartycode::lang.code.fields.is_enabled.comment"
+  code:
+    label: "yamobile.thirdpartycode::lang.code.fields.code.label"
+    size: huge
+    language: php
+    span: full
+    required: 1
+    type: codeeditor
+    commentAbove: "yamobile.thirdpartycode::lang.code.fields.code.comment"
+  target:
+    label: "yamobile.thirdpartycode::lang.code.fields.target.label"
+    nameFrom: name
+    span: full
+    required: 1
+    descriptionFrom: description
+    type: relation
+    commentAbove: "yamobile.thirdpartycode::lang.code.fields.target.comment"

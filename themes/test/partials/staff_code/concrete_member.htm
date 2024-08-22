@@ -1,0 +1,110 @@
+[viewBag]
+==
+<?php
+function onStart(){
+    $member = $this->components['Member']->member->getOriginal();
+    $memberName = $member['name'];
+    $memberDesc = $member['description'];
+    $memberMetaD = $member['meta_description'] . ' в Медицинском Центре «Астра-мед»';
+    $memberMetaImg = 'http://ukatzhost.beget.tech/storage/app/media' . $member['photo'];
+
+    $this->page->meta_tags .= '<link rel="canonical" href="' . $this->currentPageUrl() . '">' . PHP_EOL;
+    $this->page->meta_tags .= '<meta property="robots" content="index,follow">';
+    $this->page->meta_tags .= '<meta property="og:type" content="website">';
+    $this->page->meta_tags .= '<meta property="og:title" content="' . $memberName . '">';
+    $this->page->meta_tags .= '<meta property="og:description" content="' . $memberMetaD . '">';
+    $this->page->meta_tags .= '<meta property="og:image" content="' . $memberMetaImg . '">';
+    $this->page->meta_tags .= '<meta property="og:url" content="' . $this->currentPageUrl() . '">';
+    $this->page->meta_tags .= '<meta name="twitter:card" content="summary_large_image">';
+    $this->page->meta_tags .= '<meta name="twitter:title" content="' . $memberName . '">';
+    $this->page->meta_tags .= '<meta name="twitter:description" content="' . $memberMetaD . '">';
+    $this->page->meta_tags .= '<meta name="twitter:image" content="' . $memberMetaImg . '">';
+    
+
+    $this->page->title = $memberName . ' – ' . $memberDesc;
+    $this->page->meta_description = $memberMetaD;
+    
+    $jsonString = $member ["sertificates"];
+    $this ['certificates'] = json_decode($jsonString, true);
+}
+?>
+==
+{% set member = Member.member %}
+{% set member_categories = Categories.categories %}
+
+{% put styles %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+{% endput %}
+
+
+
+{% partial "parts/breadcrump" %}
+
+<section class="main-container py-0">
+        <div class="w-full pb-9">
+            <h1 class="text-2xl text-left font-bold	pb-5 uppercase">
+               {{ member.name }}
+            </h1>
+            <div class="flex flex-col md:flex-row w-full gap-5">
+                <img
+                  src="{{ member.photo | media}}"
+                  alt="{{ member.name }}" loading="lazy"
+                  class="rounded-lg w-80 h-80"
+                />
+                <div class="flex flex-col gap-5 w-full">
+                    <div>
+                        <h2 class="font-semibold text-lg"> Информация о специалисте </h2>
+                        <b class="font-normal">
+                            {{ member.content | raw}}
+                        </b>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-lg">Должность</h3>
+                        <b class="font-normal">
+                            {% for position in member.positions %}
+                                {{ position.name }}
+                            {% endfor %}
+                        </b>
+                    </div>
+                    <div class="w-full md:w-9/12 flex flex-col gap-5">
+                        {% partial "actions/form-zapis" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+{% partial "sections/diploms" %}
+
+{% if certificates != 0 %}
+    <section class="main-container">
+        <div class="slide-container swiper">
+			<div class="swiper-button-prev"></div>
+			
+            <div class="slide-content">
+				<div class="swiper-wrapper">
+                        {% for certificat in  certificates %}
+					        <div class="swiper-slide">
+                                <img src="{{certificat | media}}" class="w-full h-auto"/>
+					        </div>
+                        {% endfor %}
+					
+				</div>
+		  </div>
+	  
+			<div class="swiper-button-next"></div>
+		 </div>
+    </section>
+
+    <div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+		<button id="close-modal" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+		<img id="modal-image" src="" alt="" class="max-w-full h-fit md:h-4/5">
+  	</div>
+
+    <!-- SCRIPT load settings swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="{{'assets/js/load-swiper.js'|theme}}" defer></script>
+
+    <script src="{{'assets/js/image-modal.js'|theme}}"></script>
+{% endif %}

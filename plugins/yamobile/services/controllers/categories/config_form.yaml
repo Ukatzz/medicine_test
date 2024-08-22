@@ -1,0 +1,9 @@
+name: Категории
+modelClass: Yamobile\Services\Models\Category
+form: $/yamobile/services/models/category/fields.yaml
+defaultRedirect: yamobile/services/categories
+create:
+    redirect: 'yamobile/services/categories/update/:id'
+    redirectClose: yamobile/services/categories
+update: {  }
+preview: {  }

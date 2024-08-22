@@ -1,0 +1,4 @@
+title: Targets
+modelClass: Yamobile\ThirdPartyCode\Models\Target
+toolbar:
+  buttons: reorder_toolbar

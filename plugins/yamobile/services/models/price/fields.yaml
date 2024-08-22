@@ -1,0 +1,32 @@
+fields:
+    id:
+        label: 'yamobile.services::lang.services.id.label'
+        span: auto
+        disabled: 0
+        readOnly: 1
+        required: 1
+        type: number
+    is_enabled:
+        label: 'yamobile.services::lang.services.is_enabled.label'
+        'on': 'yamobile.services::lang.services.is_enabled.on'
+        'off': 'yamobile.services::lang.services.is_enabled.off'
+        span: auto
+        default: 1
+        type: switch
+    name:
+        label: 'yamobile.services::lang.services.name.label'
+        span: auto
+        placeholder: 'yamobile.services::lang.services.name.placeholder'
+        required: 1
+        type: text
+    price:
+        label: 'yamobile.services::lang.services.price.label'
+        span: auto
+        placeholder: 'yamobile.services::lang.services.price.placeholder'
+        type: text
+    categories:
+        label: 'yamobile.services::lang.services.categories.label'
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation

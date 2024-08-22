@@ -1,0 +1,28 @@
+{
+  "name": "yamobile/services-plugin",
+  "type": "october-plugin",
+  "description": "Simple plugin for publishing company services for October CMS.",
+  "homepage": "https://github.com/ya-mobile-ru/oc-services-plugin",
+  "keywords": [
+    "october",
+    "octobercms",
+    "services"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Evgeny Morozov",
+      "email": "evgenydmorozov@gmail.com",
+      "role": "Backend developer"
+    },
+    {
+      "name": "Nikita Zakharov",
+      "email": "sicnax@gmail.com",
+      "role": "Backend developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "minimum-stability": "dev"
+}

@@ -1,0 +1,161 @@
+tabs:
+    fields:
+        image:
+            label: 'yamobile.services::lang.services.image.label'
+            commentAbove: 'yamobile.services::lang.services.image.comment'
+            mode: image
+            span: auto
+            imageWidth: '200'
+            type: mediafinder
+            tab: 'yamobile.services::lang.services.tabs.main'
+        preview_image:
+            label: 'yamobile.services::lang.services.preview_image.label'
+            mode: image
+            imageWidth: '200'
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: mediafinder
+            commentAbove: 'yamobile.services::lang.services.preview_image.comment'
+            tab: 'yamobile.services::lang.services.tabs.main'
+        text_service_name:
+            label: 'Названия услуг'
+            span: auto
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.main'
+        text_service_price:
+            label: 'Цены услуг'
+            span: auto
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.main'
+        content:
+            label: 'yamobile.services::lang.services.content.label'
+            size: giant
+            span: full
+            type: richeditor
+            tab: 'yamobile.services::lang.services.tabs.main'
+        text_faq:
+            label: 'Часто заваемые вопросы'
+            size: giant
+            span: full
+            type: richeditor
+            tab: 'yamobile.services::lang.services.tabs.main'
+        meta_title:
+            label: 'yamobile.services::lang.services.meta.title.label'
+            placeholder: 'yamobile.services::lang.services.meta.title.placeholder'
+            span: auto
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.meta'
+        meta_description:
+            label: 'yamobile.services::lang.services.meta.description.label'
+            span: auto
+            placeholder: 'yamobile.services::lang.services.meta.description.placeholder'
+            type: text
+            comment: 'В конце текста на сайте автоматически добавится: в Медицинском Центре «Астра-мед»'
+            tab: 'yamobile.services::lang.services.tabs.meta'
+secondaryTabs:
+    fields:
+        img_block1:
+            label: 'Картинка 1 блока'
+            mode: image
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: mediafinder
+            tab: 'Tab 2'
+        text_block1:
+            label: 'Название блока'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+        text_inside_block1:
+            label: 'Текст внутри блока'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+        img_block2:
+            label: 'Картинка 2 блока'
+            mode: image
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: mediafinder
+            tab: 'Tab 2'
+        text_block2:
+            label: 'Название 2 блока'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+        text_inside_block2:
+            label: 'Текст внутри блока 2'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+        img_block3:
+            label: 'Картинка 3 блока'
+            mode: image
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: mediafinder
+            tab: 'Tab 2'
+        text_block3:
+            label: 'Название 3 блока'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+        text_inside_block3:
+            label: 'Текст внутри блока 3'
+            span: auto
+            type: text
+            tab: 'Tab 2'
+fields:
+    switch_service:
+        label: 'Главная страница (требует включенную категорию)'
+        span: right
+        type: switch
+        tab: 'yamobile.services::lang.services.tabs.main'
+    id:
+        label: 'yamobile.services::lang.services.id.label'
+        span: auto
+        readOnly: 1
+        hidden: 0
+        required: 1
+        type: number
+    is_enabled:
+        label: 'yamobile.services::lang.services.is_enabled.label'
+        'on': 'yamobile.services::lang.services.is_enabled.on'
+        'off': 'yamobile.services::lang.services.is_enabled.off'
+        span: auto
+        default: 1
+        type: switch
+    name:
+        label: 'yamobile.services::lang.services.name.label'
+        span: auto
+        placeholder: 'yamobile.services::lang.services.name.placeholder'
+        required: 1
+        type: text
+    slug:
+        label: 'yamobile.services::lang.services.slug.label'
+        span: auto
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+    category:
+        label: 'yamobile.services::lang.services.category.label'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+        tab: 'yamobile.services::lang.tabs.main'
+    description:
+        label: 'yamobile.services::lang.services.description.label'
+        placeholder: 'yamobile.services::lang.services.description.placeholder'
+        type: text
+        span: auto

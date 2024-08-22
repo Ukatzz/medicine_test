@@ -1,0 +1,21 @@
+[Members]
+membersPerPage = 20
+
+[Yamobile\Staff\Components\CategoriesComponent Categories]
+categoriesPerPage = 20
+==
+<section class="main-container flex-col">
+	<div class="flex items-center flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Команда профессионалов</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="flex justify-center">
+		<p class="text-center w-2/3">Наше профессиональное кредо - свой зуб лучше искусственного. У наc практически не бывает безнадежных случаев, специалисты спасают даже “приговоренные” зубы. Мы даем возможность людям чувствовать себя увереннее и изменить жизнь к лучшему. Пациентам с острой болью помощь оказывается немедленно.</p>
+	</div>
+	<div class="relative h-fit flex items-center flex-col">
+		{% partial "parts/doctors" data='Главная'%}
+	</div>
+    <a href="{{ 'VRACHI/vrachi'|page }}" class="w-full text-center underline font-medium">Смотреть всех врачей</a>
+</section>

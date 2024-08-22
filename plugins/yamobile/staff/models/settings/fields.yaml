@@ -1,0 +1,26 @@
+fields:
+    heading:
+        label: 'yamobile.staff::lang.settings.fields.heading.label'
+        placeholder: 'yamobile.staff::lang.settings.fields.heading.placeholder'
+        commentAbove: 'yamobile.staff::lang.settings.fields.heading.comment'
+        span: auto
+        type: text
+    image:
+        label: 'yamobile.staff::lang.settings.fields.image.label'
+        commentAbove: 'yamobile.staff::lang.settings.fields.image.comment'
+        mode: image
+        span: auto
+        type: mediafinder
+    description:
+        label: 'yamobile.staff::lang.settings.fields.description.label'
+        placeholder: 'yamobile.staff::lang.settings.fields.description.placeholder'
+        commentAbove: 'yamobile.staff::lang.settings.fields.description.comment'
+        size: huge
+        span: full
+        type: textarea
+    meta_description:
+        label: 'yamobile.staff::lang.settings.fields.meta_description.label'
+        placeholder: 'yamobile.staff::lang.settings.fields.meta_description.placeholder'
+        commentAbove: 'yamobile.staff::lang.settings.fields.meta_description.comment'
+        span: full
+        type: text

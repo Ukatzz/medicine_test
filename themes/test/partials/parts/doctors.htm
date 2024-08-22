@@ -1,0 +1,37 @@
+[Yamobile\Staff\Components\CategoriesComponent Categories]
+categoriesPerPage = 20
+==
+{% set member_settings = Settings.settings %}
+{% set member_categories = Categories.categories %}
+
+<div class="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 items-center py-4 pb-9 w-full">
+    {% for member_category in member_categories %}
+        {% for member in member_category.members %}
+        {% if member_category.name == data%}
+          <div class="flex justify-center gap-5 px-2">
+              <a href="{{'VRACHI/vrachi' | page }}/{{ member.slug }} " class="team-container">
+                {% if member.photo %}
+                <img
+                  loading="lazy"
+                  src="{{ member.photo | media }}"
+                  alt=""
+                  class="w-full" />
+                {% endif %}
+                <div class="px-4 pb-4 h-28">
+                  <p class="h-2/3 text-sm xl:text-base text-left font-medium"> {{ member.name }}</p>
+                  <p class="h-1/2 overflow-hidden text-xs line-clamp-2">
+                    {% for position in member.positions %}
+                        {% if loop.last %}
+                            {{ position.name }}
+                        {% else %}
+                            {{ position.name }}.
+                        {% endif %}
+                    {% endfor %}
+                  </p>
+                </div>
+              </a>
+          </div>
+          {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>

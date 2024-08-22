@@ -1,0 +1,50 @@
+url = "/news"
+layout = "default"
+title = "Новости «Астра-мед-72»"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Будьте в курсе последних новостей и акций стоматологической клиники Астрамед-72 в Тюмени. Узнайте о новых услугах, скидках и событиях первыми!"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/news"
+seoOptionsOgUrl = "https://astramed-72.ru/news"
+seoOptionsOgType = "website"
+seoOptionsOgImage = "/images/about/astramed.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/about/astramed.jpg"
+
+[ArticleList]
+sorting = "publish|desc"
+==
+{% set obArticleList = ArticleList.make().sort('publish|desc').published() %}
+{% set arPaginationList = Pagination.get(iPage, obArticleList.count()) %}
+{% set arArticleList = obArticleList.page(iPage, Pagination.getCountPerPage()) %}
+
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title="Новости" %}
+
+<section class="main-container py-5">
+    {% if arArticleList is not empty %}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for obArticle in arArticleList %}
+                <div class="element-slider flex justify-center gap-5 h-80">
+                    <a href="/news/{{obArticle.slug}}" class="flex justify-start gap-2 border-gray-light rounded-xl w-full shadow-md hover:shadow-orange overflow-hidden flex-col">
+                        <img loading="lazy" class="h-1/2 object-cover" src="{{ obArticle.preview_image.path }}" alt="{{ obArticle.preview_image.description }}">
+                        <div class="flex flex-col h-fit gap-2 px-4 pb-4">
+                            <h2 class="text-sm xl:text-base text-left font-bold text-orange uppercase">{{ obArticle.title }}</h2>
+                            <span>{{ obArticle.published_start.format('d F, Y') }}</span>
+                            <p class="text-sm line-clamp-2">{{ obArticle.preview_text }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="flex justify-center items-center py-5">
+            <p class="text-lg font-semibold">Новости отсутствуют</p>
+        </div>
+    {% endif %}
+</section>

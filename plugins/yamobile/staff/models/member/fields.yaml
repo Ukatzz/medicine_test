@@ -1,0 +1,78 @@
+tabs:
+    fields:
+        meta_description:
+            label: 'yamobile.staff::lang.member.fields.meta_description.label'
+            span: full
+            placeholder: 'yamobile.staff::lang.member.fields.meta_description.placeholder'
+            type: text
+            commentAbove: 'Текст для meta тега description, в конце текста на сайте автоматически добавится: в Медицинском Центре «Астра-мед»'
+            tab: SEO
+fields:
+    name:
+        label: 'yamobile.staff::lang.member.fields.name.label'
+        placeholder: 'yamobile.staff::lang.member.fields.name.placeholder'
+        commentAbove: 'yamobile.staff::lang.member.fields.name.comment'
+        span: auto
+        type: text
+    slug:
+        label: 'yamobile.staff::lang.member.fields.slug.label'
+        placeholder: 'yamobile.staff::lang.member.fields.slug.placeholder'
+        commentAbove: 'yamobile.staff::lang.member.fields.slug.comment'
+        span: auto
+        type: text
+        preset:
+            field: name
+            type: slug
+    is_active:
+        label: 'yamobile.staff::lang.member.fields.is_active.label'
+        span: full
+        default: 1
+        type: switch
+        comment: 'yamobile.staff::lang.member.fields.is_active.comment'
+    photo:
+        label: 'yamobile.staff::lang.member.fields.photo.label'
+        mode: image
+        imageWidth: '272'
+        imageHeight: '290'
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: mediafinder
+        commentAbove: 'yamobile.staff::lang.member.fields.photo.comment'
+    description:
+        label: 'yamobile.staff::lang.member.fields.description.label'
+        size: small
+        span: auto
+        placeholder: 'yamobile.staff::lang.member.fields.description.placeholder'
+        type: textarea
+        commentAbove: 'Краткое описание сотрудника (должности) - нужно для отображения в title'
+    positions:
+        label: 'yamobile.staff::lang.member.fields.positions.label'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+        commentAbove: 'yamobile.staff::lang.member.fields.positions.comment'
+    categories:
+        label: 'yamobile.staff::lang.member.fields.categories.label'
+        commentAbove: 'yamobile.staff::lang.member.fields.categories.comment'
+        span: auto
+        type: relation
+        nameFrom: name
+    content:
+        label: 'yamobile.staff::lang.member.fields.content.label'
+        commentAbove: 'yamobile.staff::lang.member.fields.content.comment'
+        size: giant
+        span: full
+        type: richeditor
+    sertificates:
+        label: Сертификаты
+        mode: image
+        maxItems: '25'
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: mediafinder
+        comment: 'Добавленные изображения при перезагрузке страницы не будут здесь отображаться, но существуют в базе данных'

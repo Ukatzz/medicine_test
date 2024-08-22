@@ -1,0 +1,28 @@
+[ReviewList]
+items = 30
+SortOrder = "new"
+reviewstyle = 1
+itemwidth = 0
+==
+<section class="main-container flex-col">
+	<div class="flex items-center flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Отзывы наших пациентов</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="slider-container flex items-center flex-col gap-5 overflow-hidden">
+        <div class="slider flex items-center py-4 w-full">
+            {% partial "parts/partFeedBack" data='1' %}
+        </div>
+		<div class="relative w-full h-12 flex justify-center gap-12 items-center">
+			<button class="prev-button">
+				<img src="{{'assets/images/icons/left-arrow.svg'|theme}}" alt="Посмотреть предыдущий слайд">
+			</button>
+			<a href="{{ 'FEEDBACK/otzyvy-na-medicinskie-uslugi-kliniki-astra-med'|page }}" class="underline font-medium">Смотреть все отзывы</a>
+			<button class="next-button">
+				<img src="{{'assets/images/icons/right-arrow.svg'|theme}}" alt="Посмотреть следующий слайд">
+			</button>
+		</div>
+	</div>
+</section>

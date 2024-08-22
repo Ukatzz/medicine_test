@@ -1,0 +1,39 @@
+[CategoriesComponent]
+items = 6
+
+[ServiceSettings]
+==
+<?php
+function onStart()
+{
+    $this->getUslugi();
+}
+
+function getUslugi()
+{
+    $uslugi = ["Имплантация", "Лечение зубов и эстетика", "Детская стоматология", "Лечение Отоларинголога"];
+
+
+    $this['uslugi'] = $uslugi;
+}
+?>
+==
+{% set service_categories = CategoriesComponent.categories %}
+{% set service_settings   = ServiceSettings.settings %}
+
+<div class="grid grid-cols-2 md:grid-cols-4 auto-cols-auto auto-rows-fr gap-4">
+    {% for category in service_categories %}
+        {% if category.name in uslugi %}
+                <article class="service-container">
+                    <a class="w-full h-full p-2.5 flex flex-col justify-center items-center gap-3" href="{{ ('uslugi/' ~ category.slug) | app }}">
+                        <img
+                            class="h-14"
+                            src="{{ category.image | media}}"
+                            loading="lazy"
+                            alt="{{ category.name }}" />
+                        <h3 class="text-base md:text-lg font-medium text-center">{{ category.name }}</h3>
+                    </a>
+                </article>
+        {%endif%}
+    {% endfor %}
+</div>

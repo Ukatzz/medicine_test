@@ -1,0 +1,61 @@
+<nav id="nav" class="w-full h-12 flex bg-primary justify-center items-center z-20">
+    <div class="hidden lg:flex main-container py-0 h-full">
+    	<ul class="nav-ul-desktop w-full">
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'MAIN/homepage'|page }}">Главная</a></li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'USLUGI/uslugi'|page }}">Услуги</a></li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'PRICES/ceny-na-medicinskie-uslugi-kliniki-astra-med'|page }}">Цены</a></li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'VRACHI/vrachi'|page }}">Врачи</a></li>
+    		<li class="nav-li-desktop relative">
+                <button class="w-full h-full flex items-center justify-center uppercase" onclick="togglePopup()">О центре <img src="{{ 'assets/images/icons/dropdown.svg'|theme }}" alt=""></button>
+
+                <div id="popup" class="absolute top-0 mt-12 mt-1 w-48 bg-primary shadow-md hidden z-10">
+                    <a href="{{ 'ABOUT/o-centre'|page }}" class="nav-popup-desktop">О центре</a>
+                    <a href="{{ 'ABOUT/news'|page }}" class="nav-popup-desktop">Новости</a>
+                    <a href="{{ 'ABOUT/yuridicheskaya'|page }}" class="nav-popup-desktop px-5">Юридическая<br>информация</a>
+                </div>
+            </li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'AKCYI/akcii'|page }}">Акции</a></li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'FEEDBACK/otzyvy-na-medicinskie-uslugi-kliniki-astra-med'|page }}">Отзывы</a></li>
+    		<li class="nav-li-desktop"><a class="w-full h-full flex items-center justify-center" href="{{ 'CONTACTS/kontaktnaya-informaciya-medicinskogo-centra-astra-med'|page }}">Контакты</a></li>
+    	</ul>
+    </div>
+	<div class="box-border flex w-full h-12 justify-between text-white lg:hidden">
+		<address class="flex items-center p-4">
+			<img src="{{'assets/images/icons/phone.svg'|theme}}" alt="">
+			<a class="not-italic text-xl" href="tel:+73452685738">+7 (3452) 68-57-38</a>
+		</address>
+		<div class="menu">
+			<input type="checkbox" id="burger-checkbox" class="hidden peer" onchange="Open(this)">
+			<label for="burger-checkbox" class="cursor-pointer select-none flex items-center justify-center h-full bg-gray-opacity px-5 peer-checked:bg-white">
+				<img src="{{'assets/images/icons/burger-menu.svg'|theme}}" alt="">
+			</label>
+		</div>
+		<ul id="mobile-nav" class="nav-ul-mobile h-fit mt-12 z-20 w-0 overflow-hidden transition-all duration-500 ease-in-out">
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'MAIN/homepage'|page }}">Главная</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'USLUGI/uslugi'|page }}">Услуги</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'PRICES/ceny-na-medicinskie-uslugi-kliniki-astra-med'|page }}">Цены</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'VRACHI/vrachi'|page }}">Врачи</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'ABOUT/o-centre'|page }}">О центре</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start text lg:justify-center" href="{{ 'ABOUT/news'|page }}">Новости</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'ABOUT/yuridicheskaya'|page }}">Юридическая информация</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'AKCYI/akcii'|page }}">Акции</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'FEEDBACK/otzyvy-na-medicinskie-uslugi-kliniki-astra-med'|page }}">Отзывы</a></li>
+			<li class="nav-li-mobile"><a class="w-full h-full flex items-center justify-start lg:justify-center" href="{{ 'CONTACTS/kontaktnaya-informaciya-medicinskogo-centra-astra-med'|page }}">Контакты</a></li>
+		</ul>
+	</div>
+</nav>
+
+<script>
+    function togglePopup() {
+        const popup = document.getElementById('popup');
+        popup.classList.toggle('hidden'); // Переключаем видимость попапа
+    }
+
+    // Закрытие попапа при клике вне его
+    document.addEventListener('click', function(e) {
+        const popup = document.getElementById('popup');
+        if (!popup.contains(e.target) && e.target.closest('li.relative') == null) {
+            popup.classList.add('hidden');
+        }
+    });
+</script>

@@ -1,0 +1,7 @@
+<?php if ($value): ?>
+        <img src="<?= Config::get('cms.storage.media.path').$value?>" alt="" style="max-height: 60px">
+<?php else: ?>
+    <span>
+        <?= e(trans('yamobile.services::lang.system.no_data')) ?>
+    </span>
+<?php endif ?>

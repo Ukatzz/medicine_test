@@ -1,0 +1,22 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('yamobile/services/prices') ?>"><?= e(trans('yamobile.services::lang.breadcrumb.prices.index')) ?></a></li>
+        <li><?= e(trans('yamobile.services::lang.breadcrumb.prices.preview')) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <div class="form-preview">
+        <?= $this->formRenderPreview() ?>
+    </div>
+
+<?php else: ?>
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+<?php endif ?>
+
+<p>
+    <a href="<?= Backend::url('yamobile/services/prices') ?>" class="btn btn-default oc-icon-chevron-left">
+        <?= e(trans('backend::lang.form.return_to_list')) ?>
+    </a>
+</p>

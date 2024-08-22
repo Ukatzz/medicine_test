@@ -1,0 +1,54 @@
+<section class="slider-container relative w-full overflow-hidden bg-gray-dark">
+	<div class="slider flex">
+		<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+			<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+				<h2 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Стоматологическая клиника <span class="text-nowrap">“Астра-мед-72”</span></h1>
+				<p class="text-sm">Записаться на прием и получить консультацию:</p>
+				{% partial 'actions/form-zapis' %}
+			</div>
+			<img class="w-[300px] hidden z-0 md:block" src="{{'assets/images/slider/Img1.png'|theme}}" alt="Врач">
+		</div>
+		<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+			<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+				<h2 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Акция «Дентальная имплантация на OSSTEM»</h1>
+				<p class="text-sm">Всего за 19 990 рублей. <a href="http://ukatzhost.beget.tech/promo/dentalnaya-implantaciya-na-osstem" rel="nofollow" target="_blank"
+					class="text-blue-dark underline"> Подробнее</a></p>
+				{% partial "actions/form-zapis" %}
+			</div>
+			<img class="w-[300px] hidden z-0 md:block" src="{{'assets/images/slider/Img1.png'|theme}}" alt="Врач">
+		</div>
+		<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+			<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+				<h2 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Элайнеры по цене брекетов</h1>
+				<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+					class="text-blue-dark underline">Об услуге</a></p>
+				{% partial "actions/form-zapis" %}
+			</div>
+			<img class="w-[300px] hidden z-0 md:block" src="{{'assets/images/slider/eurokappa.png'|theme}}" alt="Элайнеры">
+		</div>
+		<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+			<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+				<h2 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Орден за заслуги перед стоматологией 2 степени</h1>
+				<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+					class="text-blue-dark underline"></a></p>
+				{% partial "actions/form-zapis" %}
+			</div>
+			<img class="w-[300px] hidden z-0 md:block" src="{{'assets/images/slider/orden-za-zaslugi-pered-stomatologiey.png'|theme}}" alt="Орден">
+		</div>
+		<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+			<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+				<h2 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Наш медицинский центр получил награду и является инновационным центром СтАР</h1>
+				<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+					class="text-blue-dark underline"></a></p>
+				{% partial "actions/form-zapis" %}
+			</div>
+			<img class="h-[300px] hidden z-0 md:block" src="{{'assets/images/slider/star-diplom.png'|theme}}" alt="Диплом">
+		</div>
+	</div>
+	<button class="prev-button button-slider left-2.5">
+		<img src="{{'assets/images/icons/left-arrow.svg'|theme}}" alt="Посмотреть предыдущий слайд">
+	</button>
+	<button class="next-button button-slider right-2.5">
+		<img src="{{'assets/images/icons/right-arrow.svg'|theme}}" alt="Посмотреть следующий слайд">
+	</button>
+</section>

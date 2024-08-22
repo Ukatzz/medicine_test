@@ -1,0 +1,74 @@
+tabs:
+    fields:
+        meta_title:
+            label: Title
+            span: full
+            placeholder: 'Title в несколько слов'
+            type: text
+            commentAbove: 'Используется в мета-теге title на странице статьи'
+            tab: SEO
+        meta_description:
+            label: Description
+            size: small
+            span: full
+            placeholder: 'Description в несколько предложений'
+            type: textarea
+            commentAbove: 'В конце текста на сайте автоматически добавится: в Медицинском Центре «Астра-мед»'
+            tab: SEO
+fields:
+    name:
+        label: Название
+        span: full
+        placeholder: Статья
+        required: 1
+        type: text
+        commentAbove: 'Используется в качестве основного названия статьи и в теге h1 на странице статьи'
+    status:
+        label: Статус
+        span: full
+        default: 1
+        required: 1
+        type: checkbox
+        comment: 'Включить/выключить отображение категории на сайте'
+    image:
+        label: Изображение
+        mode: image
+        span: full
+        type: mediafinder
+    description:
+        label: Описание
+        size: small
+        span: full
+        required: 0
+        placeholder: 'Описание в несколько предложений'
+        type: textarea
+        commentAbove: 'Используется в карточке статьи'
+    content:
+        label: Статья
+        size: giant
+        span: full
+        required: 1
+        placeholder: 'Статья произвольной длинны'
+        type: richeditor
+    slug:
+        label: URL
+        span: full
+        required: 1
+        placeholder: post-url
+        preset:
+            field: name
+            type: slug
+        type: text
+        commentAbove: 'URL статьи'
+    category:
+        label: Категория
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation
+    categories:
+        label: Категории
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation

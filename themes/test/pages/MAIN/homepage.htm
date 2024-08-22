@@ -1,0 +1,73 @@
+url = "/"
+layout = "default"
+title = "Стоматология “Астра-мед-72” 🦷 в Тюмени [Официальный Сайт]"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsMetaDescription = "Стоматологическая клиника “Астармед-72” в Тюмени предоставляет услуги по лечению, протезирование, имплантация и отбеливание зубов, исправление прикуса, лечение десен и гигиены полости рта. Цены на услуги."
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 1.0
+seoOptionsSchemaType = "WebPage"
+seoOptionsOgImage = "/images/dental-treatment.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/dental-treatment.jpg"
+seoOptionsOgUrl = "https://astramed-72.ru/"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/"
+==
+<?php
+function onSend(){
+$vars = ['name' => 'Joe', 'user' => 'Mary'];
+
+Mail::send('backend:restore', $vars, function($message) {
+    $message->to('kmike.4work@gmail.com',);
+    $message->subject('This is a reminder');
+});
+}
+?>
+==
+<!-- SLIDER (СЛАЙДЕР) -->
+{% partial "sections/slider-form" %}
+
+<!-- SERVICES (УСЛУГИ)-->
+{% partial "sections/services" %}
+
+<!-- DESCRIPTION (ДОП.ИНФА) -->
+{% partial "sections/description" %}
+
+<!-- STANDARTS (СТАНДАРТЫ КАЧЕСТВА) -->
+{% partial "sections/standarts" %}
+
+<!-- DIPLOMS (ДИПЛОМЫ) -->
+{% partial "sections/diploms" %}
+
+<!-- TEAM (КОМАНДА) -->
+{% partial "sections/team" %}
+
+<!-- EQUIPMENT (ОБОРУДОВАНИЕ) -->
+{% partial "sections/equipment" %}
+
+<!-- PROMO (АКЦИИ) -->
+{% partial "sections/promo" %}
+
+<!-- MODELING (МОДЕЛИРОВАНИЕ) -->
+{% partial "sections/modeling" %}
+
+<!-- FEEDBACK (ОТЗЫВЫ) -->
+{% partial "sections/feedback" %}
+
+<!-- PAY (СПОСОБЫ ОПЛАТЫ) -->
+{% partial "sections/pay" %}
+
+<script>
+	document.getElementById("loadIframeButton").addEventListener("mouseover", function() {
+	    this.style.backgroundImage = "url('{{ 'assets/images/video/ythover.svg'|theme }}')";
+	});
+
+	document.getElementById("loadIframeButton").addEventListener("mouseout", function() {
+	    this.style.backgroundImage = "url('{{ 'assets/images/video/yt.svg'|theme }}')";
+	});
+</script>
+
+<!-- SCRIPT Lazy Youtube -->
+<script src="{{'assets/js/lazy-youtube.js'|theme}}"></script>

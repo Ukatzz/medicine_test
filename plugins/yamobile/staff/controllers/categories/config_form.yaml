@@ -1,0 +1,10 @@
+name: Categories
+form: $/yamobile/staff/models/category/fields.yaml
+modelClass: Yamobile\Staff\Models\Category
+defaultRedirect: yamobile/staff/categories
+create:
+  redirect: "yamobile/staff/categories/update/:id"
+  redirectClose: yamobile/staff/categories
+update:
+  redirect: yamobile/staff/categories
+  redirectClose: yamobile/staff/categories

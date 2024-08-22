@@ -1,0 +1,159 @@
+url = "/uslugi/:category_slug/:slug"
+layout = "custom"
+title = "Страница услуги"
+
+[ServiceComponent]
+category_slug = "{{ :category_slug }}"
+slug = "{{ :slug }}"
+
+[CategoriesComponent]
+items = 25
+
+[PriceSettings]
+==
+<?php
+function onEnd(){
+    $usluga = $this-> components['ServiceComponent']->service;
+
+    $uslugaName = $usluga['name'];
+    $uslugaMetaTitle = $usluga['meta_title'];
+    $uslugaMetaDescription = $usluga['meta_description'] . ' в Медицинском Центре «Астра-мед»';
+    $uslugaMetaImage = 'https://astramed-72.ru/storage/app/media' . $usluga['image'];
+
+    $this->page->meta_tags .= '<link rel="canonical" href="' . $this->currentPageUrl() . '">' . PHP_EOL;
+    $this->page->meta_tags .= '<meta property="robots" content="index,follow">';
+    $this->page->meta_tags .= '<meta property="og:type" content="website">';
+    $this->page->meta_tags .= '<meta property="og:title" content="' . $uslugaMetaTitle . '">';
+    $this->page->meta_tags .= '<meta property="og:description" content="' . $uslugaMetaDescription . '">';
+    $this->page->meta_tags .= '<meta property="og:image" content="' . $uslugaMetaImage . '">';
+    $this->page->meta_tags .= '<meta property="og:url" content="' . $this->currentPageUrl() . '">';
+    $this->page->meta_tags .= '<meta name="twitter:card" content="summary_large_image">';
+    $this->page->meta_tags .= '<meta name="twitter:title" content="' . $uslugaMetaTitle . '">';
+    $this->page->meta_tags .= '<meta name="twitter:description" content="' . $uslugaMetaDescription . '">';
+    $this->page->meta_tags .= '<meta name="twitter:image" content="' . $uslugaMetaImage . '">';
+
+    $this->page->title = $uslugaName . ' в Тюмени';
+    $this->page->meta_description = $uslugaMetaDescription;
+
+    $service_names = $usluga["text_service_name"]; 
+    $service_prices = $usluga["text_service_price"]; 
+    
+    $this['service_names_array'] = explode(',', $service_names);
+    $this['service_prices_array'] = explode(',', $service_prices);
+
+
+    $uslugar = $this-> components['ServiceComponent']->service->getRelations()["category"]->getOriginal();
+    $this["Relation"]=$uslugar;
+}
+?>
+==
+{% set service = ServiceComponent.service %}
+{% set categories = CategoriesComponent.categories %}
+{% set service_settings   = ServiceSettings.settings %}
+
+{% partial "parts/breadcrump"  data= Relation%}
+
+<!-- DESCRIPTION (ОПИСАНИЕ УСЛУГИ) -->
+<section class="main-container py-0 pb-9">
+    <img
+      src="{{ service.preview_image | media }}"
+      alt="{{ service.name }}" loading="lazy"
+        class="rounded-lg w-full md:w-2/5 md:h-80 object-cover"
+    />
+    <div class="w-full md:w-3/5 flex items-start flex-col gap-5">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">{{ service.name }}</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+		<p class="text-left text-sm">{{ service.description}}</p>
+		<div class="w-full md:w-9/12 flex flex-col gap-5">
+            {% partial "actions/form-zapis" %}
+        </div>
+	</div>
+</section>
+
+<!-- SERVICE PRICE (ТАБЛИЦА ЦЕН УСЛУГИ) -->
+<div class="w-full bg-gray-dark">
+    <section class="main-container flex-col">
+        <div id="table-content" class="w-full">
+            <table class="w-full border-b border-cyan">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b border-cyan bg-white text-left uppercase">Услуги {{ service.name }}</th>
+                        <th class="py-2 px-4 border-b border-cyan bg-white text-left uppercase">Цены</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in 0..(service_names_array|length - 1) %}
+                        <tr class="even:bg-cyan-opacity">
+                            <td class="py-2 border-cyan px-4">{{ service_names_array[i] }}</td>
+                            <td class="py-2 border-cyan px-4">{{ service_prices_array[i] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p class="text-sm">*Прайс обновляется, точные цены уточняйте по телефону у администраторов медицинского центра</p>
+		 <button type="button" onclick="window.contactModal.show()" class="orange-button-form text-base text-white">Консультация</button>
+		 <a href="{{ 'PRICES/ceny-na-medicinskie-uslugi-kliniki-astra-med'|page }}" class="w-full text-center underline font-medium">Смотреть все цены</a>
+    </section>
+</div>
+
+
+<section class="main-container py-0 pb-9">
+    <div class="w-full md:w-3/5 flex items-start flex-col gap-5">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">{{ service.name }}</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+		<p class="text-left text-sm">{{ service.content | raw }}</p>
+	</div>
+</section>
+
+<!-- ADVANTAGES (ПРЕИМУЩЕСТВА) -->
+<section class="main-container flex-col">
+	<div class="flex items-center flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Преимущества лечения</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="flex justify-center">
+		<p class="text-center w-2/3">Вы получите максимальное внимание к своему здоровью и полную информацию о возможностях лечения и профилактики.</p>
+	</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 auto-cols-max auto-rows-auto gap-4">
+        {% partial "parts/advantages-block" %}
+    </div>
+</section>
+
+<!-- DIPLOMS (ДИПЛОМЫ) -->
+{% partial "sections/diploms" %}
+
+<!-- PROMO (АКЦИИ) -->
+{% partial "sections/promo" %}
+
+<!-- TEAM (КОМАНДА) -->
+{% partial "sections/team" %}
+
+<!-- SERVICES (УСЛУГИ)-->
+{% partial "sections/services" %}
+
+<section class="main-container ">
+	<div class="flex flex-col gap-4 w-full h-full">
+		<div class="flex flex-col gap-5 w-full">
+			<div class="flex items-start flex-col w-fit">
+    			<h2 class="text-xl text-left font-medium uppercase">Ответы на часто задаваемые вопросы</h2>
+    			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		    </div>
+		</div>
+        <P class="text-base">{{ service.text_faq | raw}}</P>
+	</div>
+	<div class="w-full h-fit flex items-start flex-col gap-5 shadow-lg-form rounded-lg p-10 pt-5">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Заполните форму</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+		<p class="text-left text-sm">Наш администратор свяжется с Вами, и ответит на все оставшиеся вопросы</p>
+		{% partial "actions/form-zapis3" %}
+	</div>
+</section>

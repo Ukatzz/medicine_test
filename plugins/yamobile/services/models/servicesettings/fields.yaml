@@ -1,0 +1,32 @@
+fields:
+    image:
+        label: 'yamobile.services::lang.services.image.label'
+        mode: image
+        span: full
+        type: mediafinder
+    h1:
+        label: 'yamobile.services::lang.services.meta.h1.label'
+        placeholder: 'yamobile.services::lang.services.meta.h1.placeholder'
+        span: full
+        type: text
+    description:
+        label: 'yamobile.services::lang.services.description.label'
+        placeholder: 'yamobile.services::lang.services.description.placeholder'
+        size: huge
+        span: full
+        type: textarea
+    meta_title:
+        label: 'yamobile.services::lang.services.meta.title.label'
+        placeholder: 'yamobile.services::lang.services.meta.title.placeholder'
+        span: full
+        type: text
+    meta_keywords:
+        label: 'yamobile.services::lang.services.meta.keywords.label'
+        placeholder: 'yamobile.services::lang.services.meta.keywords.placeholder'
+        span: full
+        type: text
+    meta_description:
+        label: 'yamobile.services::lang.services.meta.description.label'
+        placeholder: 'yamobile.services::lang.services.meta.description.placeholder'
+        span: full
+        type: text

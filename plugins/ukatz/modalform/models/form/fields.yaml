@@ -1,0 +1,9 @@
+fields:
+    image:
+        label: 'Media Finder'
+        mode: file
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: mediafinder

@@ -1,0 +1,23 @@
+columns:
+  name:
+    label: "yamobile.thirdpartycode::lang.target.fields.name.label"
+    type: text
+    searchable: true
+    align: left
+  value:
+    label: "yamobile.thirdpartycode::lang.target.fields.value.label"
+    type: text
+    searchable: true
+    align: left
+  is_enabled:
+    label: "yamobile.thirdpartycode::lang.target.fields.is_enabled.label"
+    type: switch
+    align: left
+  created_at:
+    label: "yamobile.thirdpartycode::lang.target.fields.created_at.label"
+    type: text
+    align: left
+  updated_at:
+    label: "yamobile.thirdpartycode::lang.target.fields.updated_at.label"
+    type: text
+    align: left

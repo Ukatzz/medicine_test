@@ -1,0 +1,63 @@
+url = "/promo/:slug"
+layout = "custom"
+title = "Страница акции"
+
+[Post]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd(){
+    $promo = $this->components['Post']->post->getOriginal();
+
+    $promoName = $promo['name'];
+    $promoMetaTitle = $promo['meta_title'];
+    $promoMetaDescription = $promo['meta_description'] . ' в Медицинском Центре «Астра-мед»';
+    $promoMetaImage = 'https://astramed-72.ru/storage/app/media' . $promo['image'];
+
+    $this->page->meta_tags .= '<link rel="canonical" href="' . $this->currentPageUrl() . '">' . PHP_EOL;
+    $this->page->meta_tags .= '<meta property="robots" content="index,follow">';
+    $this->page->meta_tags .= '<meta property="og:type" content="website">';
+    $this->page->meta_tags .= '<meta property="og:title" content="' . $promoMetaTitle . '">';
+    $this->page->meta_tags .= '<meta property="og:description" content="' . $promoMetaDescription . '">';
+    $this->page->meta_tags .= '<meta property="og:image" content="' . $promoMetaImage . '">';
+    $this->page->meta_tags .= '<meta property="og:url" content="' . $this->currentPageUrl() . '">';
+    $this->page->meta_tags .= '<meta name="twitter:card" content="summary_large_image">';
+    $this->page->meta_tags .= '<meta name="twitter:title" content="' . $promoMetaTitle . '">';
+    $this->page->meta_tags .= '<meta name="twitter:description" content="' . $promoMetaDescription . '">';
+    $this->page->meta_tags .= '<meta name="twitter:image" content="' . $promoMetaImage . '">';
+
+    $this->page->title = $promoName;
+    $this->page->meta_description = $promoMetaDescription;
+}
+?>
+==
+{% set blog_post = Post.post %}
+
+{% partial "parts/breadcrump" %}
+
+<section class="main-container py-0">
+        <div class="w-full pb-9">
+            <h1 class="text-2xl text-left font-bold	pb-5 uppercase">
+               {{ blog_post.name }}
+            </h1>
+            <div class="flex flex-col md:flex-row w-full gap-5">
+                <img
+                  src="{{ blog_post.image | media}}"
+                  alt="{{ blog_post.name }}" loading="lazy"
+                  class="rounded-lg h-80"
+                />
+                <div class="flex flex-col gap-5 w-full">
+                    <div class="flex flex-col gap-5 w-full">
+                        <h2 class="font-semibold text-lg"> Информация о услуге</h2>
+                        <b class="font-normal">
+                             {{ blog_post.content | raw }}
+                        </b>
+                    </div>
+                    <div class="w-full flex flex-col gap-5">
+                        <p class="font-semibold text-base">Записывайтесь на прием в удобное время, позаботьтесь о своем стоматологическом здоровье</p>
+                        {% partial "actions/form-zapis" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

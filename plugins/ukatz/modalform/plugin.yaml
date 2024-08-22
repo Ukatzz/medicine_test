@@ -1,0 +1,11 @@
+plugin:
+    name: 'ukatz.modalform::lang.plugin.name'
+    description: 'ukatz.modalform::lang.plugin.description'
+    author: Ukatz
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'ukatz.modalform::lang.plugin.name'
+        url: ukatz/modalform/forms
+        icon: icon-life-ring

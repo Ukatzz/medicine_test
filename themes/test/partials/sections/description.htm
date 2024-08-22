@@ -1,0 +1,15 @@
+<section class="main-container">
+	<div class="w-full rounded-lg">
+		<div style="background-image: url({{ 'assets/images/video/hqdefault.jpg'|theme }});" class="preview-video flex justify-center items-center w-full h-64 rounded-lg bg-no-repeat bg-cover bg-center bg-preview">
+			<button style="background-image: url({{ 'assets/images/video/yt.svg'|theme }});" id="loadIframeButton" class="button-yt w-full h-full bg-no-repeat bg-16 bg-center bg-yt hover:bg-yt-hover" aria-label='Video'></button>
+		</div>
+	</div>
+	<div class="w-full flex items-start flex-col gap-5">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Добро пожаловать в астра - мед</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+		<p class="text-left text-sm">Медицинский Центр «Астра-мед» работает с 2009 года, включен в список лучших стоматологий страны по итогам Национального конкурса «Лучшие стоматологии РФ». Имеет статус «Инновационного центра» стоматологической ассоциации России. Является официальным партнером Торгового дома «Global Dent». Уже более <strong class="font-bold">13 лет</strong> мы возвращаем здоровье и красоту улыбки! За годы работы у нас прошли лечение более <strong class="font-bold">75 000 человек</strong>. Нашими главными принципами в работе является высокий профессионализм, использование передовых медицинских технологий, заботливое и чуткое отношение к пациентам, обеспечение чувства безопасности и поддержки.</p>
+		{% partial "actions/form-zapis"%}
+	</div>
+</section>

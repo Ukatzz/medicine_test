@@ -1,0 +1,4 @@
+title: Codes
+modelClass: Yamobile\ThirdPartyCode\Models\Code
+toolbar:
+  buttons: reorder_toolbar

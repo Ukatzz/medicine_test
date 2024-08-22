@@ -1,0 +1,82 @@
+tabs:
+    fields:
+        image:
+            label: 'yamobile.services::lang.services.image.label'
+            commentAbove: 'yamobile.services::lang.services.image.comment'
+            mode: image
+            span: auto
+            imageWidth: '200'
+            type: mediafinder
+            tab: 'yamobile.services::lang.services.tabs.main'
+        preview_image:
+            label: 'yamobile.services::lang.services.preview_image.label'
+            commentAbove: 'yamobile.services::lang.services.preview_image.comment'
+            mode: image
+            imageWidth: '200'
+            span: auto
+            type: mediafinder
+            tab: 'yamobile.services::lang.services.tabs.main'
+        description:
+            label: 'yamobile.services::lang.services.description.label'
+            placeholder: 'yamobile.services::lang.services.description.placeholder'
+            span: auto
+            required: 0
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.main'
+        prices:
+            label: 'yamobile.services::lang.services.prices.label'
+            nameFrom: name
+            descriptionFrom: description
+            span: full
+            type: relation
+            tab: 'yamobile.services::lang.services.tabs.main'
+        content:
+            label: 'yamobile.services::lang.services.content.label'
+            size: giant
+            span: full
+            type: richeditor
+            tab: 'yamobile.services::lang.services.tabs.main'
+        meta_title:
+            label: 'yamobile.services::lang.services.meta.title.label'
+            placeholder: 'yamobile.services::lang.services.meta.title.placeholder'
+            span: auto
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.meta'
+        meta_description:
+            label: 'yamobile.services::lang.services.meta.description.label'
+            placeholder: 'yamobile.services::lang.services.meta.description.placeholder'
+            span: auto
+            type: text
+            tab: 'yamobile.services::lang.services.tabs.meta'
+fields:
+    switch_category:
+        label: 'Главная страница (отображает вложенные услуги)'
+        span: right
+        type: switch
+    id:
+        label: 'yamobile.services::lang.services.id.label'
+        span: left
+        disabled: 0
+        readOnly: 1
+        required: 1
+        type: number
+    is_enabled:
+        label: 'yamobile.services::lang.services.is_enabled.label'
+        span: right
+        default: 1
+        type: switch
+    name:
+        label: 'yamobile.services::lang.services.name.label'
+        span: auto
+        placeholder: 'yamobile.services::lang.services.name.placeholder'
+        required: 1
+        type: text
+    slug:
+        label: 'yamobile.services::lang.services.slug.label'
+        span: auto
+        disabled: 0
+        required: 0
+        preset:
+            field: name
+            type: slug
+        type: text

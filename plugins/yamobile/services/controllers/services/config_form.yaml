@@ -1,0 +1,11 @@
+name: Services
+modelClass: Yamobile\Services\Models\Service
+form: $/yamobile/services/models/service/fields.yaml
+defaultRedirect: yamobile/services/services
+create:
+    redirect: 'yamobile/services/services/update/:id'
+    redirectClose: yamobile/services/services
+update:
+    redirect: yamobile/services/services
+    redirectClose: yamobile/services/services
+preview: {  }

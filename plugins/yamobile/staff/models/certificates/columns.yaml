@@ -1,0 +1,50 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+    name:
+        label: name
+        type: text
+    photo:
+        label: photo
+        type: text
+    description:
+        label: description
+        type: text
+        searchable: true
+    content:
+        label: content
+        type: text
+    slug:
+        label: slug
+        type: text
+    meta_title:
+        label: meta_title
+        type: text
+        searchable: true
+    meta_description:
+        label: meta_description
+        type: text
+    meta_keywords:
+        label: meta_keywords
+        type: text
+    sort_order:
+        label: sort_order
+        type: number
+    created_at:
+        label: created_at
+        type: datetime
+        searchable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+    deleted_at:
+        label: deleted_at
+        type: datetime
+    is_active:
+        label: is_active
+        type: text
+    certificates:
+        label: certificates
+        type: text

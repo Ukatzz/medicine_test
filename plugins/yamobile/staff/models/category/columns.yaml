@@ -1,0 +1,14 @@
+columns:
+  name:
+    label: "yamobile.staff::lang.category.fields.name.label"
+    type: text
+    align: left
+    searchable: true
+  created_at:
+    label: "yamobile.staff::lang.category.fields.created_at.label"
+    type: datetime
+    align: left
+  updated_at:
+    label: "yamobile.staff::lang.category.fields.updated_at.label"
+    type: datetime
+    align: left

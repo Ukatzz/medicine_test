@@ -1,0 +1,10 @@
+name: Codes
+form: $/yamobile/thirdpartycode/models/code/fields.yaml
+modelClass: Yamobile\ThirdPartyCode\Models\Code
+defaultRedirect: yamobile/thirdpartycode/codes
+create:
+  redirect: "yamobile/thirdpartycode/codes/update/:id"
+  redirectClose: yamobile/thirdpartycode/codes
+update:
+  redirect: yamobile/thirdpartycode/codes
+  redirectClose: yamobile/thirdpartycode/codes

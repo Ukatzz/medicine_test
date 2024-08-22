@@ -1,0 +1,4 @@
+title: Members
+modelClass: Yamobile\Staff\Models\Member
+toolbar:
+  buttons: reorder_toolbar

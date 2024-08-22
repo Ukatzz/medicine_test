@@ -1,0 +1,27 @@
+fields:
+    image:
+        label: image
+        mode: image
+        span: auto
+        type: mediafinder
+    description:
+        label: description
+        size: huge
+        span: auto
+        type: textarea
+    h1:
+        label: H1
+        span: auto
+        type: text
+    meta_title:
+        label: meta_title
+        span: auto
+        type: text
+    meta_description:
+        label: meta_description
+        span: auto
+        type: text
+    meta_keywords:
+        label: meta_keywords
+        span: auto
+        type: text

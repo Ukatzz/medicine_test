@@ -1,0 +1,10 @@
+name: Positions
+form: $/yamobile/staff/models/position/fields.yaml
+modelClass: Yamobile\Staff\Models\Position
+defaultRedirect: yamobile/staff/positions
+create:
+  redirect: "yamobile/staff/positions/update/:id"
+  redirectClose: yamobile/staff/positions
+update:
+  redirect: yamobile/staff/positions
+  redirectClose: yamobile/staff/positions

@@ -1,0 +1,35 @@
+url = "/promo"
+layout = "default"
+title = "Акции на Медицинские Услуги Клиники Астра Мед"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Акции на медицинские услуги в Тюмени. Акция на дентальную имплантацию OSSTEM]\" 3. Акция: лечение кариеса под микроскопом. Скидка 15% в горячее время можете записаться в медицинском центре Астра Мед."
+seoOptionsCanonicalUrl = "https://astramed-72.ru/promo"
+seoOptionsOgUrl = "https://astramed-72.ru/promo"
+seoOptionsOgImage = "/images/promo/bonus.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/promo/bonus.jpg"
+
+[BlogCategories]
+
+[BlogSettings]
+
+[Posts]
+slug = "{{ :slug }}"
+==
+{% set blog_categories = BlogCategories.categories%}
+{% set blog_post = Post.post %}
+
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title="Спецпредложения и акции" %}
+
+<section class="main-container py-5">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+       {% partial "parts/proms" full=true%}
+    </div>
+</section>

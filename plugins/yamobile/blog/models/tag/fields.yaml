@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: Название
+        commentAbove: 'Используется в качестве основного названия тега'
+        placeholder: 'Тег'
+        span: full
+        type: text
+        required: 1
+    slug:
+        label: Slug
+        commentAbove: 'Используется в URL'
+        placeholder: 'teg'
+        span: full
+        preset:
+            field: name
+            type: slug
+        type: text
+        required: 1

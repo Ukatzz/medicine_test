@@ -1,0 +1,114 @@
+v1.0.1:
+    - 'Initialize plugin.'
+v1.1.0:
+    - 'Added plugin menu display'
+    - 'Added the ability to create categories and sub-categories'
+    - create_yamobile_services_services.php
+    - create_yamobile_services_subservices.php
+v2.0.0:
+    - 'Added the ability to link sub-categories to categories'
+    - rename_yamobile_services_subservices_category_to_service.php
+    - rename_yamobile_services_services_imageurl_to_image.php
+    - rename_yamobile_services_subservices_imageurl_to_image.php
+v2.1.0:
+    - 'Changed the display of images in the list of categories and sub-categories'
+    - 'Fixed incorrectly name bd columns for picture'
+    - 'Fixed incorrectly name bd columns for link categories'
+v2.2.0:
+    - 'Added components for display categories and sub-category on the template'
+    - add_url_to_yamobile_services_services.php
+    - add_url_to_yamobile_services_subservices.php
+v2.3.0:
+    - 'Added display lists categories and sub-categories'
+v2.4.1:
+    - 'Structuring the fields of the record creation form'
+v3.0.0:
+    - 'Added output of a detailed page of records'
+    - rename_yamobile_services_services_url_to_slug.php
+    - rename_yamobile_services_subservices_url_to_slug.php
+v3.1.0:
+    - 'Added English localisation for plugin'
+v4.0.0:
+    - 'Rename name file and class for services and sub-services'
+    - 'Rename database table'
+    - rename_table_yamobile_services_services.php
+    - rename_table_yamobile_services_subservices.php
+v4.1.0:
+    - 'Fixed a bug when creating a service and selecting categories'
+    - 'Added a dynamic link to the image'
+    - rename_yamobile_services_services_service_id.php
+v4.2.0:
+    - 'Added the ability to hide records'
+    - add_enabled_to_yamobile_services_category.php
+    - add_enabled_to_yamobile_services_services.php
+v4.2.1:
+    - 'Fixed the error of displaying a record with an incorrect category_slug'
+    - 'Fixed display of inactive service categories'
+    - 'Fixed empty page display for inactive categories and services'
+v4.3.0:
+    - 'Add sorting for categories and services'
+    - add_reorder_to_yamobile_services_category.php
+    - add_reorder_to_yamobile_services_services.php
+v4.4.0:
+    - 'Created table yamobile_services_price'
+    - 'Created table yamobile_price_to_service_categories'
+    - create_yamobile_services_price.php
+    - create_price_to_category.php
+v4.4.1:
+    - 'Added the ability to output an array of bread crumbs for categories and services'
+    - 'Added the ability to create price lists for categories'
+    - 'Added the ability to import and export price lists to cvs'
+    - 'Updated table yamobile_services_price'
+    - rename_table_yamobile_services_prices.php
+v4.4.2:
+    - 'Fixed the need to enter "all" in the "items" property when displaying all categories or services'
+v4.5.0:
+    - 'Add description to services'
+    - add_description_to_services.php
+v4.6.0:
+    - 'Add price settings'
+v4.7.0:
+    - 'Added output of related categories in the list of all price lists'
+    - 'Added preview image to categories and services'
+    - add_preview_image_to_services.php
+    - add_preview_image_to_category.php
+v4.8.0:
+    - 'Added heading property for categories pages and services pages'
+    - add_h1_to_categories.php
+    - add_h1_to_services.php
+v4.8.1:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services.php
+v4.8.2:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_2.php
+v4.8.3:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_3.php
+v4.8.4:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_4.php
+v4.8.5:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_5.php
+v4.8.6:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_6.php
+v4.8.7:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_7.php
+v4.8.8:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_8.php
+v4.8.9:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_9.php
+v4.8.10:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_10.php
+v4.8.11:
+    - 'Updated table yamobile_services_services'
+    - builder_table_update_yamobile_services_services_11.php
+v4.8.12:
+    - 'Updated table yamobile_services_categories'
+    - builder_table_update_yamobile_services_categories.php

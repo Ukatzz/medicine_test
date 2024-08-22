@@ -1,0 +1,11 @@
+import:
+  title: Импорт
+  modelClass: Yamobile\Services\Models\PriceImport
+  list: $/yamobile/services/models/priceimport/columns.yaml
+  redirect: yamobile/services/prices
+
+export:
+  title: Экспорт
+  modelClass: Yamobile\Services\Models\PriceExport
+  list: $/yamobile/services/models/priceexport/columns.yaml
+  redirect: yamobile/services/prices

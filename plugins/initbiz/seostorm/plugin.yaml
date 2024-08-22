@@ -1,0 +1,10 @@
+plugin:
+    name: 'initbiz.seostorm::lang.plugin.name'
+    description: 'initbiz.seostorm::lang.plugin.description'
+    author: Initbiz
+    icon: icon-search
+
+permissions:
+    initbiz.seostorm.config:
+        tab: 'initbiz.seostorm::lang.permissions.settings_tab'
+        label: 'initbiz.seostorm::lang.permissions.config'

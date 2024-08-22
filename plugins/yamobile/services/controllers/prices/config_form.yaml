@@ -1,0 +1,10 @@
+name: Prices
+modelClass: Yamobile\Services\Models\Price
+form: $/yamobile/services/models/price/fields.yaml
+defaultRedirect: yamobile/services/prices
+create:
+    redirect: 'yamobile/services/prices/update/:id'
+    redirectClose: yamobile/services/prices
+update:
+    redirect: yamobile/services/prices
+    redirectClose: yamobile/services/prices

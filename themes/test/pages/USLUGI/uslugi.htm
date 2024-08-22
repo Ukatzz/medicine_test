@@ -1,0 +1,30 @@
+url = "/uslugi"
+layout = "default"
+title = "Услуги медицинского центра “Астра-мед-72”"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Все виды услуг в медицинском центре “Астра-мед-72”"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/uslugi"
+seoOptionsOgUrl = "https://astramed-72.ru/uslugi"
+seoOptionsOgImage = "/images/uslugi_inside/otolaryngology_top.png"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/otolaryngology_top.png"
+
+[CategoriesComponent]
+items = 6
+==
+{% set service_categories = CategoriesComponent.categories %}
+{% set service_settings   = ServiceSettings.settings %}
+
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title='Услуги медицинского центра "Астрамед"' %}
+
+
+<section class="main-container py-5">
+       {% partial "parts/uslugi" %}
+</section>

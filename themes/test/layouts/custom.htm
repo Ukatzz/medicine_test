@@ -1,0 +1,70 @@
+==
+<?php
+function onSendSucces()
+{
+    return Redirect::to('/thanks');
+}
+?>
+==
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+    <title> {{this.page.title}} </title>
+    <meta name="description" content="{{ this.page.meta_description }}"> 
+    {{ this.page.meta_tags | raw }}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="{{ 'assets/css/output.css'|theme }}" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="{{ 'assets/images/logo.png'|theme }}" rel="shortcut icon" type="image/x-icon">
+	<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet"
+	/>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Le0uSsqAAAAAGrBrufXHUEdgE9ZuDkb9mSmdQgQ"></script>
+	
+    {% styles %}
+	{% content "YandexMetrica.htm" %}
+</head>
+<body class="w-full">
+
+	{% partial 'header'%}
+
+	{% partial 'nav' %}
+
+	<!-- MAIN -->
+	<main id="main">
+		{% page %}
+	</main>
+
+	{% partial 'footer' %}
+
+    <!-- MODAL -->
+    {% partial "actions/form-zapis2" %}
+
+	<!-- SCRIPT fix navigation to top  -->
+	<script src="{{'assets/js/fix-nav.js'|theme}}"></script>
+
+	<!-- SCRIPT open right menu on mobile -->
+	<script src="{{'assets/js/open-menu.js'|theme}}"></script>
+
+	<!-- SCRIPT slider -->
+	<script src="{{'assets/js/slider.js'|theme}}"></script>
+
+	<!-- SCRIPT standart cards open and close -->
+	<script src="{{'assets/js/view-cards.js'|theme}}"></script>
+
+    <!-- SCRIPT phone mask -->
+	<script src="{{'assets/js/phone-mask.js'|theme}}"></script>
+
+    <!-- SCRIPT widget -->
+	<script src="{{'assets/js/widget.js'|theme}}"></script>
+
+    <!-- SCRIPT recaptcha -->
+	<script src="{{'assets/js/submit-token.js'|theme}}"></script>
+	
+	{% framework extras %}
+	{% scripts %}
+</body>
+</html>

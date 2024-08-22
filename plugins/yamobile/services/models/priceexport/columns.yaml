@@ -1,0 +1,9 @@
+columns:
+  id: 'yamobile.services::lang.services.id.label'
+  name: 'yamobile.services::lang.services.name.label'
+  price: 'yamobile.services::lang.services.price.label'
+  sort_order: 'yamobile.services::lang.services.sort_order'
+  is_enabled: 'yamobile.services::lang.services.is_enabled.label'
+  created_at: 'yamobile.services::lang.services.created_at'
+  updated_at: 'yamobile.services::lang.services.updated_at'
+

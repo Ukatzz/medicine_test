@@ -1,0 +1,48 @@
+url = "/review"
+layout = "default"
+title = "Новый отзыв"
+seoOptionsMetaDescription = "Оставить свой отзыв на Яндекс.Картах, в Google Maps, в 2ГИС, в Zoon, в Про Докторов"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/review"
+seoOptionsOgUrl = "https://astramed-72.ru/review"
+seoOptionsOgImage = "/images/uslugi_inside/otolaryngology_top.png"
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/uslugi_inside/otolaryngology_top.png"
+==
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title='Добавление отзыва' %}
+
+<section class="main-container py-5">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 items-center py-4 pb-9 w-full">
+        <a class="bg-[#fff8dd] font-bold text-base md:text-2xl rounded-lg text-center py-8 hover:opacity-50" 
+            href="https://yandex.ru/maps/org/meditsinskiy_tsentr_astra_med/1204780891/?ll=65.568167%2C57.113023&z=14">
+            Яндекс.Карты
+        </a>
+        <a class="bg-[#89c4ff] font-bold text-base md:text-2xl rounded-lg text-center py-8 hover:opacity-50" 
+            href="https://clck.ru/3CVMQJ">
+            Google Maps
+        </a>
+        <a class="bg-[#cbe88d] font-bold text-base md:text-2xl rounded-lg text-center py-8 hover:opacity-50" 
+            href="https://2gis.ru/tyumen/firm/1830115630006781/tab/reviews?writeReview">
+            2ГИС
+        </a>
+        <a class="bg-[#ae98fa] font-bold text-base md:text-2xl rounded-lg text-center py-8 hover:opacity-50" 
+            href="https://tyumen.zoon.ru/medical/meditsinskij_tsentr_astra-med_na_ulitse_permyakova/reviews/">
+            Zoon
+        </a>
+        <a class="bg-[#ecf1fb] font-bold text-base md:text-2xl rounded-lg text-center py-8 hover:opacity-50" 
+            href="https://prodoctorov.ru/new/rate/lpu/31874/">
+            Про Докторов
+        </a>
+    </div>
+</section>
+
+{% partial "sections/standarts-more" %}
+
+{% partial "sections/diploms" %}
+
+{% partial "sections/services" %}
+
+{% partial "sections/more-info" %}

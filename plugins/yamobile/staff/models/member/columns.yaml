@@ -1,0 +1,45 @@
+columns:
+  sort_order:
+    label: "yamobile.staff::lang.member.fields.sort_order.label"
+    type: number
+    align: left
+  name:
+    label: "yamobile.staff::lang.member.fields.name.label"
+    type: text
+    align: left
+    searchable: true
+  slug:
+    label: "yamobile.staff::lang.member.fields.slug.label"
+    type: text
+    align: left
+    searchable: true
+  positions:
+    label: "yamobile.staff::lang.member.fields.positions.label"
+    type: text
+    align: left
+    searchable: true
+    relation: positions
+    valueFrom: name
+  categories:
+    label: "yamobile.staff::lang.member.fields.categories.label"
+    type: text
+    align: left
+    searchable: true
+    relation: categories
+    valueFrom: name
+  is_active:
+    label: 'yamobile.staff::lang.member.fields.is_active.label'
+    type: switch
+  created_at:
+    label: "yamobile.staff::lang.member.fields.created_at.label"
+    type: datetime
+    align: left
+  updated_at:
+    label: "yamobile.staff::lang.member.fields.updated_at.label"
+    type: datetime
+    align: left
+  fileupload:
+        label: 'fileupload'
+        type: text
+        searchable: true
+        sortable: true

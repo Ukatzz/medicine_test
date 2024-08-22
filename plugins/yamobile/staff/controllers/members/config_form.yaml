@@ -1,0 +1,10 @@
+name: Members
+form: $/yamobile/staff/models/member/fields.yaml
+modelClass: Yamobile\Staff\Models\Member
+defaultRedirect: yamobile/staff/members
+create:
+  redirect: "yamobile/staff/members/update/:id"
+  redirectClose: yamobile/staff/members
+update:
+  redirect: yamobile/staff/members
+  redirectClose: yamobile/staff/members

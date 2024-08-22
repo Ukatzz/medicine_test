@@ -1,0 +1,97 @@
+url = "/about"
+layout = "default"
+title = "Все о медицинском центре «Астрамед» в Тюмени"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.9
+seoOptionsMetaDescription = "Медицинский центр «Астрамед» – это: Современное оборудование, Высокое качество услуг, Лечение передовыми методиками, Команда профессионалов."
+seoOptionsCanonicalUrl = "https://astramed-72.ru/about"
+seoOptionsOgUrl = "https://astramed-72.ru/about"
+seoOptionsOgType = "website"
+seoOptionsOgImage = "/images/about/astramed.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/about/astramed.jpg"
+==
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title='Информация о медицинском центре "Астрамед"' %}
+
+<!-- DESCRIPTION (ДОП.ИНФА) -->
+<section class="main-container">
+	<div class="w-full">
+		<img src="{{ 'assets/images/about/astramed.jpg'|theme }}" alt="Астрамед" class="rounded-xl w-full">
+	</div>
+	<div class="w-full flex items-start flex-col gap-5">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Добро пожаловать в астра - мед</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+		<p class="text-left text-sm">Уже более <strong class="font-bold">13 лет</strong> мы возвращаем здоровье и красоту улыбки! За годы работы у нас прошли лечение более <strong class="font-bold">45 000 человек</strong>. Благодаря новым технологиям и современному передовому оборудованию мы сумели превратить лечебный процесс в комфортную безболезненную процедуру. Мы предоставляем стоматологические услуги в соответствии с высокими международными стандартами.</p>
+		{% partial "actions/form-zapis" %}
+	</div>
+</section>
+
+<!-- STANDARTS (СТАНДАРТЫ КАЧЕСТВА) -->
+<section class="main-container flex-col">
+	<div class="flex items-start flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Проверенная временем стомотология</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-2 auto-cols-auto auto-rows-auto gap-4">
+		<article class="flex flex-col gap-3">
+			<img class="rounded-lg w-full" src="{{ 'assets/images/about/moment-1.jpg'|theme }}">
+			<h3 class="text-base font-bold uppercase">Современное оборудование</h3>
+			<p class="text-xs">Для того чтобы высокопрофессиональные врачи в полной мере смогли применить свои опыт и знания на благо Вашего здоровья, в Медицинском Центре «Астра-мед-72» созданы все необходимые технические условия. У нас есть методики и технологии, которые позволяют проводить даже сложное лечение и добиваться успешных результатов.</p>
+		</article>
+		<article class="flex flex-col gap-3">
+			<img class="rounded-lg w-full" src="{{ 'assets/images/about/moment-2.jpg'|theme }}">
+			<h3 class="text-base font-bold uppercase">Визиограф</h3>
+			<p class="text-xs">Важный инструмент, необходимый для работы стоматолога. Он позволяет провести быстрое и точное обследование одного-двух зубов. Мы быстро поставим диагноз и приступим к лечению. Чувствительный датчик позволяет сделать снимок за несколько секунд и изучить состояние зубов, каналов и тканей, окружающих зуб.</p>
+		</article>
+		<article class="flex flex-col gap-3">
+			<img class="rounded-lg w-full" src="{{ 'assets/images/about/moment-3.jpg'|theme }}">
+			<h3 class="text-base font-bold uppercase">Интраоральная камера</h3>
+			<p class="text-xs">Для того чтобы высокопрофессиональные врачи в полной мере смогли применить свои опыт и знания на благо Вашего здоровья, в Медицинском Центре «Астра-мед-72» созданы все необходимые технические условия. У нас есть методики и технологии, которые позволяют проводить даже сложное лечение и добиваться успешных результатов.</p>
+		</article>
+		<article class="flex flex-col gap-3">
+			<img class="rounded-lg w-full" src="{{ 'assets/images/about/moment-4.jpg'|theme }}">
+			<h3 class="text-base font-bold uppercase">Компьютерная томография</h3>
+			<p class="text-xs">Важный инструмент, необходимый для работы стоматолога. Он позволяет провести быстрое и точное обследование одного-двух зубов. Мы быстро поставим диагноз и приступим к лечению. Чувствительный датчик позволяет сделать снимок за несколько секунд и изучить состояние зубов, каналов и тканей, окружающих зуб.</p>
+		</article>
+	</div>
+</section>
+
+<!-- DESCRIPTION (ДОП. ИНФА) -->
+<section class="main-container flex-col">
+	<div class="flex items-start flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Комплексное восстановление здоровья</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+		<div class="flex justify-center w-full h-full text-sm">
+			<p>Мы стремимся к тому, чтобы Ваши зубы были здоровыми, а улыбка — красивой, поэтому практикуем индивидуальный подход. Врач проведет полное обследование полости рта, выявит все задачи, которые нужно решить, и привлечет специалистов других направлений для эффективного планирования лечения. Не будет упущена ни одна деталь!</p>
+	 	</div>
+		<div class="flex justify-center w-full h-full text-sm">
+			<p>Обратившись к нам, Вы обретете в лице наших врачей своих верных союзников, которые направят на сохранение Вашего здоровья весь свой опыт и профессионализм.</p>
+	 	</div>
+	</div>
+</section>
+
+<!-- STANDARTS (СТАНДАРТЫ КАЧЕСТВА) -->
+{% partial "sections/standarts-more" %}
+
+<!-- SERVICES (УСЛУГИ)-->
+{% partial "sections/services" %}
+
+<!-- TEAM (КОМАНДА) -->
+{% partial "sections/team" %}
+
+<!-- MORE (ДОП. ИНФА) -->
+{% partial "sections/more-info" %}

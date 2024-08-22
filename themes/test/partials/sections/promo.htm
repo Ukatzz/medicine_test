@@ -1,0 +1,19 @@
+<section class="main-container flex-col">
+	<div class="flex items-center flex-col gap-12">
+		<div class="flex items-start flex-col w-fit">
+			<h2 class="text-xl text-left font-medium uppercase">Акции</h2>
+			<span class="block bg-orange w-[50px] h-[3px]"></span>
+		</div>
+	</div>
+	<div class="flex justify-center">
+		<p class="text-center w-2/3">Мы заботимся о том, чтобы качественное лечение было доступно каждому. Именно поэтому для вас:</p>
+	</div>
+	<div class="relative h-full flex items-center flex-col">
+		<div class="scroll-gradient-l"></div>
+		<div class="horizontal-scroll-block">
+			{% partial "parts/proms" %}
+		</div>
+		<div class="scroll-gradient-r"></div>
+	</div>
+    <a href="{{  'AKCYI/akcii'| page }}" class="w-full text-center underline font-medium">Смотреть все акции</a>
+</section>

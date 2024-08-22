@@ -1,0 +1,24 @@
+plugin:
+    name: 'yamobile.blog::lang.plugin.name'
+    description: 'yamobile.blog::lang.plugin.description'
+    author: Ya-mobile
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    blog:
+        label: Блог
+        url: yamobile/blog/category
+        icon: icon-files-o
+        sideMenu:
+            category:
+                label: Категории
+                url: yamobile/blog/category
+                icon: icon-list
+            post:
+                label: Статьи
+                url: yamobile/blog/post
+                icon: icon-file-text
+            tags:
+                label: Теги
+                url: yamobile/blog/tag
+                icon: icon-tags

@@ -1,0 +1,15 @@
+columns:
+    name:
+        label: Название
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: Slug
+        type: text
+    created_at:
+        label: Создано
+        type: datetime
+    updated_at:
+        label: Изменено
+        type: datetime

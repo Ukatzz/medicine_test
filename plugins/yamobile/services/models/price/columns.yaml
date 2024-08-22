@@ -1,0 +1,27 @@
+columns:
+    id:
+        label: 'yamobile.services::lang.services.id.label'
+        type: number
+        span: auto
+    name:
+        label: 'yamobile.services::lang.services.name.label'
+        type: text
+        span: auto
+        searchable: true
+    price:
+        label: 'yamobile.services::lang.services.price.label'
+        type: text
+    categories:
+        label: 'yamobile.services::lang.services.categories.label'
+        relation: categories
+        type: text
+        select: name
+    is_enabled:
+        label: 'yamobile.services::lang.services.is_enabled.label'
+        type: switch
+    created_at:
+        label: 'yamobile.services::lang.services.created_at'
+        type: datetime
+    updated_at:
+        label: 'yamobile.services::lang.services.updated_at'
+        type: datetime

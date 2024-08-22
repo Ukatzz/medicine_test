@@ -1,0 +1,22 @@
+fields:
+  name:
+    label: Название
+    span: full
+    placeholder: "Перед </body>"
+    required: 1
+    type: text
+    commentAbove: "Отображается только в админ-панели"
+  is_enabled:
+    label: Включен
+    span: full
+    default: 1
+    required: 1
+    type: checkbox
+    comment: "Отображать код на странице"
+  value:
+    label: Значение
+    span: full
+    placeholder: body
+    required: 1
+    type: text
+    commentAbove: "Для обозначения компонента"

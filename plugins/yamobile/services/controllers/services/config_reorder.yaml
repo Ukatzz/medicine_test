@@ -1,0 +1,4 @@
+title: Services
+modelClass: Yamobile\Services\Models\Service
+toolbar:
+  buttons: reorder_toolbar

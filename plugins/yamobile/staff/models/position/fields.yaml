@@ -1,0 +1,7 @@
+fields:
+  name:
+    label: "yamobile.staff::lang.position.fields.name.label"
+    placeholder: "yamobile.staff::lang.position.fields.name.placeholder"
+    commentAbove: "yamobile.staff::lang.position.fields.name.comment"
+    span: full
+    type: text

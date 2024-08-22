@@ -1,0 +1,33 @@
+<dialog id="contactModal" aria-label="Записаться" class="modal">
+		<div class="flex w-full h-full justify-center items-center">
+			<div class="flex flex-col items-center bg-white rounded-lg w-80 p-5 gap-4">
+				<div class="flex w-full justify-end">
+					<button type="button" onclick="window.contactModal.close()"><img src="{{'assets/images/icons/close.svg'|theme}}" alt="Закрыть"></button>
+				</div>
+				<div class="flex items-center gap-3">
+					<img src="{{'assets/images/logo.png'|theme }}" class="header__logo-image" />
+					<p class="font-bold text-xl text-gray-light">Астра-мед-72</p>
+				</div>
+					<h4 class="font-bold text-lg">Обратный звонок</h4>
+					<p class="text-center text-base font-medium">
+						Оставьте свой номер телефона и мы перезвоним вам в течение <span class="text-red-500">5 минут!</span>
+					</p>
+					<form id="email-form-3" name="email-form-3" data-name="Форма обратный звонок" method="POST"
+					data-metrika-goal="first-section-form" class="flex w-full flex-col justify-center" data-request="Tracker::onSubmitLeadForm" data-request-redirect="{{'FEEDBACK/spasibo'|page}}">
+						<input type="hidden" name="grecaptcha" class="token">
+						<input type="tel" class="tel border border-gray-light rounded-xl px-3 py-2" maxlength="256" name="phone"
+						data-name="Номер телефона"
+						pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+						placeholder="+7 (999) 000 00-00" id="email-2" required="" />
+						<input type="submit" value="Перезвонить"
+						data-wait="Please wait..." class="orange-button-form" />
+					</form>
+					<div class="text-xs">
+						Нажимая на кнопку, я выражаю свое согласие на
+						<a href="{{  'assets/documents/soglasie-na-obrabotky-personalnih-dannih.pdf'|theme }}" rel="nofollow" target="_blank"
+						class="text-blue-dark underline">обработку персональных данных</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</dialog>

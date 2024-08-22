@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="./src/output.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet"
+	/>
+</head>
+<body class="w-full">
+	<!-- HEADER -->
+	<header
+		id="header"
+		class="container mx-auto flex justify-center py-3 text-sm"
+	>
+		<div class="flex justify-between font-normal text-black w-3/4 flex-col md:flex-row">
+		<a href="https://astramed-72.ru/" class="flex items-center gap-3"
+			><img src="./media/logo.png" alt="" class="header__logo-image" />
+			<p class="font-bold text-xl text-gray-light">Астра-мед-72</p>
+		</a>
+		<div class="visible sm:visible md:invisible xl:visible text-center md:text-left">
+			<address class="not-italic">
+				<span class="text-blue-dark font-bold">Адрес:</span><br />г. Тюмень,
+				ул. Пермякова, 68, к 2
+			</address>
+			<address class="text-blue-dark font-bold not-italic">
+				Почта:
+				<a class="text-black font-normal" href="mailto:astramed2009@mail.ru"
+				>astramed2009@mail.ru</a
+				>
+			</address>
+		</div>
+		<div class="text-center md:text-left">
+			<p>
+				<span class="text-blue-dark font-bold">Время:<br /></span>Пн-Пт: с
+				09:00 до 20:00<br />Сб-Вс: с 09:00 до 16:00<br />
+			</p>
+		</div>
+		<div class="text-center md:text-left">
+			<div>
+				<p class="text-blue-dark font-bold text-base">Телефон:</p>
+				<address class="text-base not-italic">
+				<a href="tel:+73452685738">+7 (3452) 68-57-38</a>
+				</address>
+			</div>
+			<div class="orange-button">
+				<a href="#" data-ix="open" class="text-base text-white"
+				>Консультация</a
+				>
+			</div>
+		</div>
+		</div>
+	</header>
+
+	<!-- NAVIGATION -->
+	<nav id="nav" class="w-full h-12 flex bg-primary justify-center items-center z-20">
+		<ul class="nav-ul-desktop">
+			<li class="nav-li-desktop"><a href="">Главная</a></li>
+			<li class="nav-li-desktop"><a href="" class="flex justify-center items-center">Услуги <img src="./media/icons/dropdown.svg"></a></li>
+			<li class="nav-li-desktop"><a href="">Цены</a></li>
+			<li class="nav-li-desktop"><a href="">Врачи</a></li>
+			<li class="nav-li-desktop"><a href="">О центре</a></li>
+			<li class="nav-li-desktop"><a href="">Акции</a></li>
+			<li class="nav-li-desktop"><a href="">Отзывы</a></li>
+			<li class="nav-li-desktop"><a href="">Контакты</a></li>
+		</ul>
+		<div class="box-border flex w-full h-12 justify-between text-white lg:hidden">
+			<address class="flex items-center p-4">
+				<img src="./media/icons/phone.svg">
+				<a class="not-italic text-xl" href="tel:+73452685738">+7 (3452) 68-57-38</a>
+			</address>
+			<div class="menu">
+				<input type="checkbox" id="burger-checkbox" class="hidden peer" onchange="Open(this)">
+				<label for="burger-checkbox" class="cursor-pointer select-none flex items-center justify-center h-full bg-gray-opacity px-5 peer-checked:bg-white">
+					<img src="./media/icons/burger-menu.svg">
+				</label>
+			</div>
+			<ul id="mobile-nav" class="nav-ul-mobile mt-12 z-20 w-0 overflow-hidden transition-all duration-500 ease-in-out">
+				<li class="nav-li-mobile"><a href="">Главная</a></li>
+				<li class="nav-li-mobile"><a href="" class="flex justify-left items-center">Услуги <img src="./media/icons/dropdown.svg"></a></li>
+				<li class="nav-li-mobile"><a href="">Цены</a></li>
+				<li class="nav-li-mobile"><a href="">Врачи</a></li>
+				<li class="nav-li-mobile"><a href="">О центре</a></li>
+				<li class="nav-li-mobile"><a href="">Акции</a></li>
+				<li class="nav-li-mobile"><a href="">Отзывы</a></li>
+				<li class="nav-li-mobile"><a href="">Контакты</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- MAIN -->
+	<main id="main">
+		<!-- SLIDER (СЛАЙДЕР) -->
+		<section class="slider-container relative w-full overflow-hidden bg-gray-dark">
+			<div class="slider flex">
+				<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+					<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+						<h1 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Стоматологическая клиника <span class="text-nowrap">“Астра-мед-72”</span></h1>
+						<p class="text-sm">Записаться на прием и получить консультацию:</p>
+						<form data-name="Записаться на прием" method="get"
+                        data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full md:w-fit text-sm xl:flex-row">
+                        <input type="hidden" name="token" id="token">
+                        <input type="tel" class="border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+                          data-name="Телефон"
+                          pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+                          placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+								<input type="submit"
+                          value="Узнать подробнее" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+						</form>
+						<div class="text-xs">
+							Нажимая на кнопку, я выражаю свое согласие на
+							<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">обработку персональных данных</a>
+						</div>
+					</div>
+					<img class="w-[300px] hidden z-0 md:block" src="./media/slider/Img1.png" alt="Врач">
+				</div>
+				<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+					<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+						<h1 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Акция «Дентальная имплантация на OSSTEM»</h1>
+						<p class="text-sm">Всего за 19 990 рублей. <a href="" rel="nofollow" target="_blank"
+							class="text-blue-dark underline"> Подробнее</a></p>
+						<form data-name="Записаться на прием" method="get"
+                        data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full md:w-fit text-sm xl:flex-row">
+                        <input type="hidden" name="token" id="token">
+                        <input type="tel" class="border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+                          data-name="Телефон"
+                          pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+                          placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+								<input type="submit"
+                          value="Узнать подробнее" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+						</form>
+						<div class="text-xs">
+							Нажимая на кнопку, я выражаю свое согласие на
+							<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">обработку персональных данных</a>
+						</div>
+					</div>
+					<img class="w-[300px] hidden z-0 md:block" src="./media/slider/Img1.png" alt="Врач">
+				</div>
+				<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+					<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+						<h1 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Элайнеры по цене брекетов</h1>
+						<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">Об услуге</a></p>
+						<form data-name="Записаться на прием" method="get"
+                        data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full md:w-fit text-sm xl:flex-row">
+                        <input type="hidden" name="token" id="token">
+                        <input type="tel" class="border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+                          data-name="Телефон"
+                          pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+                          placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+								<input type="submit"
+                          value="Узнать подробнее" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+						</form>
+						<div class="text-xs">
+							Нажимая на кнопку, я выражаю свое согласие на
+							<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">обработку персональных данных</a>
+						</div>
+					</div>
+					<img class="w-[300px] hidden z-0 md:block" src="./media/slider/eurokappa.png" alt="Врач">
+				</div>
+				<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+					<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+						<h1 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Орден за заслуги перед стоматологией 2 степени</h1>
+						<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+							class="text-blue-dark underline"></a></p>
+						<form data-name="Записаться на прием" method="get"
+                        data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full md:w-fit text-sm xl:flex-row">
+                        <input type="hidden" name="token" id="token">
+                        <input type="tel" class="border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+                          data-name="Телефон"
+                          pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+                          placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+								<input type="submit"
+                          value="Узнать подробнее" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+						</form>
+						<div class="text-xs">
+							Нажимая на кнопку, я выражаю свое согласие на
+							<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">обработку персональных данных</a>
+						</div>
+					</div>
+					<img class="w-[300px] hidden z-0 md:block" src="./media/slider/orden-za-zaslugi-pered-stomatologiey.png" alt="Врач">
+				</div>
+				<div class="element-slider mx-auto flex justify-center items-center min-w-full gap-28 px-20 md:px-0">
+					<div class="flex flex-col w-full md:w-1/4 gap-3 py-8 z-10">
+						<h1 class="text-blue-dark-s font-medium text-2xl md:text-3xl uppercase">Наш медицинский центр получил награду и является инновационным центром СтАР</h1>
+						<p class="text-sm"><a href="" rel="nofollow" target="_blank"
+							class="text-blue-dark underline"></a></p>
+						<form data-name="Записаться на прием" method="get"
+                        data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full md:w-fit text-sm xl:flex-row">
+                        <input type="hidden" name="token" id="token">
+                        <input type="tel" class="border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+                          data-name="Телефон"
+                          pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+                          placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+								<input type="submit"
+                          value="Узнать подробнее" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+						</form>
+						<div class="text-xs">
+							Нажимая на кнопку, я выражаю свое согласие на
+							<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+							class="text-blue-dark underline">обработку персональных данных</a>
+						</div>
+					</div>
+					<img class="h-[300px] hidden z-0 md:block" src="./media/slider/star-diplom.png" alt="Врач">
+				</div>
+			</div>
+			<button class="prev-button button-slider left-2.5">
+				<img src="./media/icons/left-arrow.svg" alt="Посмотреть предыдущий слайд">
+			</button>
+			<button class="next-button button-slider right-2.5">
+				<img src="./media/icons/right-arrow.svg" alt="Посмотреть следующий слайд">
+			</button>
+		</section>
+		<!-- SERVICES (УСЛУГИ)-->
+		<section class="main-container flex-col items-center">
+			<div class="flex items-center flex-col gap-12">
+				<div class="flex items-start flex-col w-fit">
+					<h2 class="text-xl text-left font-medium uppercase">Услуги</h2>
+					<span class="block bg-orange w-[50px] h-[3px]"></span>
+				</div>
+			</div>
+			<p class="text-center w-2/3">Ваши здоровье и комфорт — это приоритеты Центра «Астра-мед».В одном месте Вы можете пройти полный курс лечения, включая диагностику</p>
+			<div class="grid grid-cols-2 md:grid-cols-4 auto-cols-auto auto-rows-fr gap-4">
+				<article class="service-container">
+					<a class="flex flex-col justify-center items-center gap-3" href="#">
+						<img class="h-14" src="./media/services/Lechenie1.png">
+						<h3 class="text-base md:text-lg font-medium text-center">Лечение зубов и эстетика</h3>
+					</a>
+				</article>
+				<article class="service-container">
+					<a class="flex flex-col justify-center items-center gap-3" href="#">
+						<img class="h-14" src="./media/services/implant1.png">
+						<h3 class="text-base md:text-lg font-medium text-center">Имплантация зубов</h3>
+					</a>
+				</article>
+				<article class="service-container">
+					<a class="flex flex-col justify-center items-center gap-3" href="#">
+						<img class="h-14" src="./media/services/clean.png">
+						<h3 class="text-base md:text-lg font-medium text-center">Гигиента полости рта</h3>
+					</a>
+				</article>
+				<article class="service-container">
+					<a class="flex flex-col justify-center items-center gap-3" href="#">
+						<img class="h-14" src="./media/services/otbelivanie.png">
+						<h3 class="text-base md:text-lg font-medium text-center">Отбеливание зубов</h3>
+					</a>
+				</article>
+				<article class="service-container">
+					<a class="flex flex-col justify-center items-center gap-3" href="#">
+						<img class="h-14" src="./media/services/prikus1.png">
+						<h3 class="text-base md:text-lg font-medium text-center">Брекеты</h3>
+					</a>
+				</article>
+			</div>
+		</section>
+		<!-- DESCRIPTION (ДОП.ИНФА) -->
+		<section class="main-container">
+			<div class="w-full rounded-lg">
+				<div class="preview-video flex justify-center items-center w-full h-64 rounded-lg bg-no-repeat bg-cover bg-center bg-preview">
+					<button id="loadIframeButton" class="w-full h-full bg-no-repeat bg-16 bg-center bg-yt hover:bg-yt-hover"></button>
+				</div>
+			</div>
+			<div class="w-full flex items-start flex-col gap-5">
+				<div class="flex items-start flex-col w-fit">
+					<h2 class="text-xl text-left font-medium uppercase">Добро пожаловать в астра - мед</h2>
+					<span class="block bg-orange w-[50px] h-[3px]"></span>
+				</div>
+				<p class="text-left text-sm">Медицинский Центр «Астра-мед» работает с 2009 года, включен в список лучших стоматологий страны по итогам Национального конкурса «Лучшие стоматологии РФ». Имеет статус «Инновационного центра» стоматологической ассоциации России. Является официальным партнером Торгового дома «Global Dent». Уже более <span class="font-bold">13 лет</span> мы возвращаем здоровье и красоту улыбки! За годы работы у нас прошли лечение более <span class="font-bold">75 000 человек</span>. Нашими главными принципами в работе является высокий профессионализм, использование передовых медицинских технологий, заботливое и чуткое отношение к пациентам, обеспечение чувства безопасности и поддержки.</p>
+				<form data-name="Записаться на прием" method="get"
+						data-metrika-goal="first-section-form" class="flex flex-col gap-3 p-3 border-2 border-orange rounded-lg w-full text-sm 2xl:flex-row">
+					<input type="hidden" name="token" id="token">
+					<input type="tel" class="w-full border border-gray-light px-3 py-2" maxlength="256" name="Phone-5"
+							data-name="Телефон"
+							pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+							placeholder="+7 (___) ___ __ __" id="Phone-5" required="" />
+					<input type="submit"
+							value="Получить консультацию" data-wait="Ожидайте..." class="bg-cyan rounded-lg text-white px-3 py-2 shadow-lg hover:shadow-inner" />
+				</form>
+				<div class="text-xs">
+					Нажимая на кнопку, я выражаю свое согласие на
+					<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+					class="text-blue-dark underline">обработку персональных данных</a>
+				</div>
+			</div>
+		</section>
+		<!-- STANDARTS (СТАНДАРТЫ КАЧЕСТВА) -->
+		<section class="main-container flex-col items-center">
+			<div class="flex items-center flex-col gap-12">
+				<div class="flex items-start flex-col w-fit">
+					<h2 class="text-xl text-left font-medium uppercase">Высокие стандарты качества</h2>
+					<span class="block bg-orange w-[50px] h-[3px]"></span>
+				</div>
+			</div>
+			<p class="text-center w-2/3">Вы получите максимальное внимание к своему здоровью и полную информацию о возможностях лечения и профилактики.</p>
+			<div class="grid grid-cols-2 md:grid-cols-3 auto-cols-auto auto-rows-auto gap-4">
+				<article class="standart-container">
+					<div class="standart-container h-full md:h-48">
+						<div class="flex wrap-standart">
+							<img class="h-20" src="./media/standarts/laboratory.svg">
+							<button class="toggle-button flex flex-col justify-center items-center text-sm font-medium text-cen uppercase">
+								<h3>Лечение передовыми технологиями</h3>
+								<p class="font-bold">v</p>
+							</button>
+						</div>
+						<div class="hidden wrap-standart">
+							<p>Помимо классических способов, применяем последние разработки. Лечим под микроскопом, применяем инновационную методику PlasmoliftingTM.</p>
+						</div>
+					</div>
+				</article>
+				<article class="standart-container">
+					<div class="standart-container w-full h-full md:h-48">
+						<div class="flex wrap-standart">
+							<img class="h-20" src="./media/standarts/stamp.svg">
+							<button class="toggle-button flex flex-col justify-center items-center text-sm font-medium text-cen uppercase">
+								<h3>Ответственность</h3>
+								<p class="font-bold">v</p>
+							</button>
+						</div>
+						<div class="hidden wrap-standart">
+							<p>Даем расширенную гарантию на все виды лечения.</p>
+						</div>
+					</div>
+				</article>
+				<article class="standart-container">
+					<div class="standart-container w-full h-full md:h-48">
+						<div class="flex wrap-standart">
+							<img class="h-20" src="./media/standarts/secure-shield.svg">
+							<button class="toggle-button flex flex-col justify-center items-center text-sm font-medium text-cen uppercase">
+								<h3>Безопасность</h3>
+								<p class="font-bold">v</p>
+							</button>
+						</div>
+						<div class="hidden wrap-standart">
+							<p>Используем лучшие технологии для стерилизации. Все инструменты проходят многоступенчатую обработку.</p>
+						</div>
+					</div>
+				</article>
+				<article class="standart-container">
+					<div class="standart-container w-full h-full md:h-48">
+						<div class="flex wrap-standart">
+							<img class="h-20" src="./media/standarts/calendar.svg">
+							<button class="toggle-button flex flex-col justify-center items-center text-sm font-medium text-cen uppercase">
+								<h3>Прием без очередей и в удобное время</h3>
+								<p class="font-bold">v</p>
+							</button>
+						</div>
+						<div class="hidden wrap-standart">
+							<p>Подберем удобное для вас время посещения доктора, и вам не придется.</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<!-- FEEDBACK (ОТЗЫВЫ) -->
+		<section class="main-container flex-col">
+			<div class="flex items-center flex-col gap-12">
+				<div class="flex items-start flex-col w-fit">
+					<h2 class="text-xl text-left font-medium uppercase">Отзывы наших пациентов</h2>
+					<span class="block bg-orange w-[50px] h-[3px]"></span>
+				</div>
+			</div>
+			<div class="slider-container flex items-center flex-col gap-5 overflow-hidden">
+				<div class="slider flex items-center py-4 w-full">
+					<div class="element-slider  flex justify-center gap-5 min-w-full px-2">
+						<div class="flex justify-between gap-5 border-gray-light rounded-xl w-full shadow-md py-8 px-5 flex-col md:flex-row">
+							<div class="font-bold flex flex-col justify-center items-center w-full md:w-2/6 border-b-2 md:border-r-2 md:border-b-0 border-primary pr-0 pb-5  md:pr-5 md:pb-0">
+								<img src="./media/icons/female-ava.svg" class="w-[100px]">
+								<p class="text-center">Юлия Трифонова</p>
+								<time datetime="2024-02-09" class="text-center font-normal">9 февраля 2024</time>
+								<div class="flex flex-col md:flex-row justify-center items-center w-full">
+									<img class="h-5" src="./media/icons/star-icon.svg">
+									<p class="font-medium">5/5</p>
+								</div>
+							</div>
+							<blockquote class="w-full">
+								<p class="text-wrap">"В клинику Астра-Мед для установки брекетов дочери 10 лет пришли по рекомендации. Записали нас к доктору Абуди. Доктор с первой минуты впечатлил и расположил к себе ребенка. Брекет-систему установили в феврале, уже через месяц был виден ощутимый результат. На активацию ходим раз в два месяца и почти, как на праздник))). Ассистенты доктора прекрасные специалисты, которые вносят значительный вклад в большую работу!! Спасибо!"</p>
+								<cite class="font-medium w-full text-wrap break-wordsd">Яндекс Карты</cite>
+							</blockquote>
+						</div>
+					</div>
+					<div class="element-slider  flex justify-center gap-5 min-w-full px-2">
+						<div class="flex justify-between gap-5 border-gray-light rounded-xl w-full shadow-md py-8 px-5 flex-col md:flex-row">
+							<div class="font-bold flex flex-col justify-center items-center w-full md:w-2/6 border-b-2 md:border-r-2 md:border-b-0 border-primary pr-0 pb-5  md:pr-5 md:pb-0">
+								<img src="./media/icons/female-ava.svg" class="w-[100px]">
+								<p class="text-center">Александра</p>
+								<time datetime="2024-02-09" class="text-center font-normal">9 февраля 2024</time>
+								<div class="flex flex-col md:flex-row justify-center items-center w-full">
+									<img class="h-5" src="./media/icons/star-icon.svg">
+									<p class="font-medium">5/5</p>
+								</div>
+							</div>
+							<blockquote class="w-full">
+								<p>"В клинику Астра-Мед для установки брекетов дочери 10 лет пришли по рекомендации. Записали нас к доктору Абуди. Доктор с первой минуты впечатлил и расположил к себе ребенка. Брекет-систему установили в феврале, уже через месяц был виден ощутимый результат. На активацию ходим раз в два месяца и почти, как на праздник))). Ассистенты доктора прекрасные специалисты, которые вносят значительный вклад в большую работу!! Спасибо!"</p>
+								<cite class="font-medium w-full text-wrap break-wordsd">2GIS</cite>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="relative w-full h-12 flex justify-center gap-12 items-center">
+					<button class="prev-button">
+						<img src="./media/icons/left-arrow.svg" alt="Посмотреть предыдущий слайд">
+					</button>
+					<a href="" class="underline font-medium">Смотреть все отзывы</a>
+					<button class="next-button">
+						<img src="./media/icons/right-arrow.svg" alt="Посмотреть следующий слайд">
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- DIPLOMS (ДИПЛОМЫ) -->
+		<section class="w-full bg-gray-dark">
+			<div class="main-container">
+				<figure class="flex flex-col md:flex-row items-center gap-4">
+					<img class="h-48" src="./media/diploms/sertificate-2.min.jpg">
+					<img class="h-80" src="./media/diploms/sertificate-1.min.jpg">
+					<img class="h-48" src="./media/diploms/sertificate-3.min.jpg">
+					<figcaption>
+						<h2 class="text-black font-bold text-5xl">«Лучшие стоматологии РФ»</h2>
+						<p class="text-sm text-black">Медицинский центр Астрамед — лауреат Национального конкурса «Лучшие стоматологии РФ»</p>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+		<!-- PAY (СПОСОБЫ ОПЛАТЫ) -->
+		<section class="main-container">
+			<img src="./media/dental-treatment.jpg" alt="Работа врачей" class="rounded-xl w-full md:w-1/2 ">
+			<div class="flex gap-4 flex-col w-full md:w-1/2">
+				<div>
+					<h2 class="text-blue-dark-s font-medium text-xl uppercase">Способы оплаты лечение зубов “под ключ”</h2>
+					<span class="block bg-orange w-[50px] h-[3px]"></span>
+				</div>
+				<p class="text-sm">Медицинский Центр «Астра-мед-72» работает с 2009 года, за это время здоровье своих зубов доверили нам более 75 000 человек.</p>
+				<p class="text-sm">В нашей клинике возможен как безналичный расчёт так и оплата наличными.</p>
+				<p class="text-sm">Вы сделали верный шаг на пути к здоровью обратившись к нам в Стоматологическую клинику Астра-мед-72!</p>
+				<button class="orange-button-form text-base text-white">Рассчитать стоимость лечения</button>
+			</div>
+		</section>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="text-sm">
+		<div class="bg-gray py-8">
+			<div class="container w-11/12 mx-auto">
+				<div class="flex gap-2.5 flex-col w-fit justify-between md:flex-row">
+					<div class="flex flex-row justify-between mb-5 md:mb-0">
+						<div class="w-1/2">
+							<p class="font-bold">Информация</p>
+							<ul class="mt-2.5">
+								<li>Лечение зубов</li>
+								<li>Имплантация зубов</li>
+								<li>Гигиена полости рта</li>
+								<li>Отбеливание зубов</li>
+								<li>Брекеты</li>
+								<li>Элайнеры</li>
+								<li>Протезирование зубов</li>
+								<li>Лечение дёсен</li>
+								<li>Лечение уха</li>
+								<li>Лечение горла</li>
+								<li>Лечение носа</li>
+							</ul>
+						</div>
+						<div class="w-1/2">
+							<p class="font-bold">Услуги</p>
+							<ul class="mt-2.5">
+								<li>Главная</li>
+								<li>О центре</li>
+								<li>Цены</li>
+								<li>Наши специалисты</li>
+								<li>Юридическая информация</li>
+								<li>Работа медицинского центра в условиях COVID-19</li>
+							</ul>
+						</div>
+					</div>
+					<div class="w-full md:w-1/5 flex flex-col gap-3">
+						<p class="font-bold">Наши контакты</p>
+						<div class="flex flex-col">
+							<p class="font-bold inline">Телефон:</p>
+							<address>
+								<a href="tel:+73452685738" class="text-lg font-light not-italic hover:underline active:underline">+7 (3452) 68-57-38</a>
+							</address>
+						</div>
+
+						<div class="flex flex-col">
+							<p class="font-bold inline">Адрес:</p>
+							<p class="font-medium">625016, г. Тюмень, ул. Пермякова, 68, к 2</p>
+						</div>
+
+						<div class="flex flex-row gap-2">
+							<p class="font-bold inline">Почта:</p>
+							<a href="" class="font-medium">astramed2009@mail.ru</a>
+						</div>
+
+						<div class="flex flex-col">
+							<p class="font-bold inline">Время:</p>
+							<ul>
+							<li class="font-medium">Пн-Пт: с 09:00 до 20:00</li>
+							<li class="font-medium">Сб-Вс: с 09:00 до 16:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="flex flex-col gap-3 w-full md:w-2/6">
+						<p class="text-left font-medium">Астра-мед-72 Официальный сайт стоматологической клиники в Тюмени: стоматология и отоларингология</p>
+						<form id="wf-form-Email-Form-5" name="wf-form-Email-Form-5" data-name="Форма подвал" method="get"
+							data-metrika-goal="first-section-form" class="flex flex-col gap-3">
+							<input type="hidden" name="token" id="token">
+							<label class="text-black font-bold">Задать вопрос</label>
+							<div class="flex flex-col gap-3">
+								<input type="tel" class="border border-gray-light rounded-xl px-3 py-2" maxlength="256" name="name-13" data-name="Телефон"
+									pattern="[\+]{1}[7]{1}[\(]{1}[9]{1}[0-9]{2}[\)]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"
+									placeholder="+ 7 (_ _ _) _ _ _ _" id="name-13" required="" />
+								<input type="submit" value="Отправить" data-wait="Ожидайте..." class="orange-button-form" />
+								<div class="text-xs">
+									Нажимая на кнопку, я выражаю свое согласие на
+									<a href="documents/soglasie-na-obrabotky-personalnih-dannih.pdf" rel="nofollow" target="_blank"
+									class="text-blue-dark underline">обработку персональных данных</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-primary text-white py-8">
+			<div class="container mx-auto w-11/12">
+				<div class="flex items-center flex justify-end">
+					<p class="mr-2.5">Разработка и продвижение сайта:</p>
+					<img src="./media/icons/ya-mobile-logo.svg" alt="" class="w-[100px]">
+				</div>
+				<p class="mt-2.5 text-justify">Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями статьи 437 (2) ГК РФ. Все цены, указанные на данном сайте, носят информационный характер. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления.
+				</p>
+				<p class="mt-10">© 2018-2024 Астра-мед-72 – Стоматологическая клиника в Тюмени. Все права защищены.</p>
+			</div>
+		</div>
+  	</footer>
+
+	<!-- SCRIPT fix navigation to top  -->
+	<script>
+		window.onload = () => {
+			const nav = document.getElementById('nav');
+			const header = document.getElementById('header');
+			const heightHeader = header.offsetHeight;
+			const navHeight = nav.offsetHeight;
+			const main = document.getElementById('main');
+
+			window.onscroll = () => {
+				if(window.scrollY > heightHeader && nav.style.display !== 'none') {
+					nav.classList.add('fixed', 'top-0');
+					main.style.marginTop = navHeight + 'px';
+				} else {
+					nav.classList.remove('fixed', 'top-0');
+					main.style.marginTop = '0';
+				}
+			}
+		}
+	</script>
+
+	<!-- SCRIPT open right menu on mobile -->
+	<script>
+		function Open(checkbox) {
+			const navMobile = document.getElementById('mobile-nav');
+			if (checkbox.checked) {
+				navMobile.classList.add('w-1/2','md:w-1/3');
+				navMobile.classList.remove('w-0');
+			} else {
+				navMobile.classList.remove('w-1/2','md:w-1/3');
+				navMobile.classList.add('w-0');
+			}
+		}
+	</script>
+
+	<!-- SCRIPT slider -->
+	<script>
+		document.querySelectorAll('.slider-container').forEach((container) => {
+			initializeSlider(container);
+		});
+
+		function initializeSlider(container) {
+			const slider = container.querySelector('.slider');
+			const prevButton = container.querySelector('.prev-button');
+			const nextButton = container.querySelector('.next-button');
+
+			const slides = Array.from(slider.querySelectorAll('.element-slider'));
+			const slideCount = slides.length;
+			let slideIndex = 1; // Начинаем с 1, т.к. первый элемент будет клоном последнего
+
+			// Клонируем первый и последний слайд
+			const firstClone = slides[0].cloneNode(true);
+			const lastClone = slides[slides.length - 1].cloneNode(true);
+			slider.appendChild(firstClone);
+			slider.insertBefore(lastClone, slides[0]);
+
+			// Задаем начальный сдвиг
+			slider.style.transform = `translateX(-100%)`;
+
+			prevButton.addEventListener('click', showPrev);
+			nextButton.addEventListener('click', showNext);
+
+			function showPrev() {
+				slideIndex--;
+				updateSlider();
+			}
+
+			function showNext() {
+				slideIndex++;
+				updateSlider();
+			}
+
+			function updateSlider() {
+				slider.style.transition = 'transform 0.5s ease-in-out';
+				slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+
+				// Если достигаем клона первого слайда (при листании влево)
+				if (slideIndex === 0) {
+						setTimeout(() => {
+							slider.style.transition = 'none';
+							slideIndex = slideCount;
+							slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+						}, 500); // Время должно совпадать с временем transition
+				}
+
+				// Если достигаем клона последнего слайда (при листании вправо)
+				if (slideIndex === slideCount + 1) {
+						setTimeout(() => {
+							slider.style.transition = 'none';
+							slideIndex = 1;
+							slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+						}, 500); // Время должно совпадать с временем transition
+				}
+			}
+		}
+
+	</script>
+
+	<!-- SCRIPT Lazy Youtube -->
+	<script>
+		document.getElementById('loadIframeButton').addEventListener('click', function() {
+			this.remove();
+
+			const iframe = document.createElement('iframe');
+			iframe.className = 'w-full rounded-lg';
+			iframe.height = '256';
+			iframe.frameBorder = '0';
+			iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+			iframe.allowFullscreen = true;
+			iframe.src = 'https://www.youtube-nocookie.com/embed/EyFEA-E1rf0?autoplay=1';
+
+			document.querySelector('.preview-video').appendChild(iframe);
+		});
+
+	</script>
+
+	<!-- SCRIPT standart cards open and close -->
+	 <script>
+		document.addEventListener('DOMContentLoaded', () => {
+		const buttons = document.querySelectorAll('.toggle-button');
+
+		buttons.forEach(button => {
+			button.addEventListener('click', () => {
+				document.querySelectorAll('.standart-container .wrap-standart').forEach(wrapper => {
+					wrapper.classList.replace('hidden', 'flex');
+				});
+				document.querySelectorAll('.standart-container .wrap-standart + .wrap-standart').forEach(wrapper => {
+					wrapper.classList.replace('flex', 'hidden');
+				});
+
+				const parentContent = button.closest('.standart-container');
+				const [visibleWrapper, hiddenWrapper] = parentContent.querySelectorAll('.wrap-standart');
+
+				visibleWrapper.classList.replace('flex', 'hidden');
+				hiddenWrapper.classList.replace('hidden', 'flex');
+			});
+		});
+		});
+	 </script>
+  </body>
+</html>

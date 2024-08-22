@@ -1,0 +1,20 @@
+plugin:
+  name: "yamobile.thirdpartycode::lang.name"
+  description: "yamobile.thirdpartycode::lang.description"
+  author: Ya-mobile
+  icon: oc-icon-code
+  homepage: ""
+navigation:
+  code:
+    label: "yamobile.thirdpartycode::lang.name"
+    url: yamobile/thirdpartycode/codes
+    icon: icon-code
+    sideMenu:
+      side-menu-item:
+        label: "yamobile.thirdpartycode::lang.code.name"
+        url: yamobile/thirdpartycode/codes
+        icon: icon-code
+      side-menu-item2:
+        label: "yamobile.thirdpartycode::lang.target.name"
+        url: yamobile/thirdpartycode/targets
+        icon: icon-dot-circle-o

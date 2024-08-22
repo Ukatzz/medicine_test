@@ -1,0 +1,29 @@
+url = "/contacts"
+layout = "default"
+title = "Контактная информация медицинского центра Астра Мед"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+seoOptionsChangefreq = "always"
+seoOptionsPriority = 0.8
+seoOptionsMetaDescription = "Контактная информация медицинского центра Астра Мед"
+seoOptionsCanonicalUrl = "https://astramed-72.ru/contacts"
+seoOptionsOgUrl = "https://astramed-72.ru/contacts"
+seoOptionsOgImage = "/images/about/astramed.jpg"
+seoOptionsOgRefImage = "https://astramed-72.ru/storage/app/media/images/about/astramed.jpg"
+==
+{% partial "parts/breadcrump" %}
+
+{% partial "parts/title-in-page" title="Контактная информация" %}
+
+<section class="main-container py-5">
+    <div class="w-full flex flex-col gap-3">
+		{% partial "parts/contacts"%}
+		{% partial "actions/form-zapis4" %}
+	</div>
+    <div class="w-full flex flex-col gap-3">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A69e2e39192fbb1ed92f0d1ee415eef7c64fe2eb229801bab935417a91910c5ee&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+	</div>
+</section>

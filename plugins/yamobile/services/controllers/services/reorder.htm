@@ -1,0 +1,8 @@
+<? $this->pageTitle = e(trans('yamobile.services::lang.breadcrumb.services.reorder')) ?>
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="<?= Backend::url('yamobile/services/categories') ?>"><?= e(trans('yamobile.services::lang.breadcrumb.services.index')) ?></a></li>
+    <li><?= e($this->pageTitle) ?></li>
+</ul>
+<?php Block::endPut() ?>
+<?= $this->reorderRender() ?>

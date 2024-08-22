@@ -1,0 +1,27 @@
+[BlogSettings]
+
+[BlogCategories]
+
+[Posts]
+slug = "{{ :slug }}"
+==
+{% set blog_categories = BlogCategories.categories%}
+{% set blog_post = Post.post %}
+
+{% for blog_category in blog_categories %}
+    {% if blog_category.posts is not empty %}
+        {% for blog_post in blog_category.posts %}
+            <div class="element-slider flex justify-center gap-5 {{ full=='true' ? '' :'w-80' }} h-full">
+                <a href="promo/{{ blog_post.slug }}" class="flex justify-start gap-2 border-gray-light rounded-xl w-full shadow-md hover:shadow-orange overflow-hidden flex-col">
+                    <img loading="lazy" src="{{blog_post.image| media}}" class="object-cover h-48 w-full" alt="{{ blog_post.name}}">
+                    <div class="flex flex-col gap-2 px-4 pb-4">
+                        <p class="text-sm xl:text-base text-left font-bold text-orange uppercase">«{{ blog_post.name}}»</p>
+                        <div class="overflow-hidden">
+                            <p class="text-sm">{{ blog_post.description }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
